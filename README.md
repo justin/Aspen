@@ -13,7 +13,7 @@ I got annoyed with Lumberjack, so I made my own logging framework called Aspen.
 
 You can install Aspen through [Carthage][c] or as a Git submodule using the Aspen framework target.
 
-There is currently not a podspec. See the below second for why.
+There is currently not a podspec. See the below section for why.
 
 ### Support
 
