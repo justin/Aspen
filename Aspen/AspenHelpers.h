@@ -20,12 +20,9 @@
 //    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //    THE SOFTWARE.
 
-@import UIKit;
+@import Foundation;
 
-//! Project version number for Aspen.
-FOUNDATION_EXPORT double AspenVersionNumber;
-
-//! Project version string for Aspen.
-FOUNDATION_EXPORT const unsigned char AspenVersionString[];
-
-#import <Aspen/AspenHelpers.h>
+extern void AspenVerbose(NSString *message, ...);
+extern void AspenInfo(NSString *message, ...);
+extern void AspenWarn(NSString *message, ...);
+extern void AspenError(NSString *message, ...);

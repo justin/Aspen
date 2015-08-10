@@ -17,6 +17,8 @@
 		D040582C1B72E44A00494FCD /* LogInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040582B1B72E44A00494FCD /* LogInterface.swift */; };
 		D040582E1B72E76500494FCD /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040582D1B72E76500494FCD /* Logger.swift */; };
 		D041E3741B73B918002D6FB7 /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D041E3731B73B918002D6FB7 /* LogFormatter.swift */; };
+		D0604CD71B79538A00E50E97 /* AspenHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = D0604CD51B79538A00E50E97 /* AspenHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0604CD81B79538A00E50E97 /* AspenHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D0604CD61B79538A00E50E97 /* AspenHelpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		D040582B1B72E44A00494FCD /* LogInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInterface.swift; sourceTree = "<group>"; };
 		D040582D1B72E76500494FCD /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		D041E3731B73B918002D6FB7 /* LogFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFormatter.swift; sourceTree = "<group>"; };
+		D0604CD51B79538A00E50E97 /* AspenHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AspenHelpers.h; sourceTree = "<group>"; };
+		D0604CD61B79538A00E50E97 /* AspenHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AspenHelpers.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				D040580C1B72C86400494FCD /* Aspen.h */,
 				D040580B1B72C86400494FCD /* Info.plist */,
+				D0604CD51B79538A00E50E97 /* AspenHelpers.h */,
+				D0604CD61B79538A00E50E97 /* AspenHelpers.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -154,6 +160,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0604CD71B79538A00E50E97 /* AspenHelpers.h in Headers */,
 				D040580D1B72C86400494FCD /* Aspen.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +266,7 @@
 				D040582C1B72E44A00494FCD /* LogInterface.swift in Sources */,
 				D041E3741B73B918002D6FB7 /* LogFormatter.swift in Sources */,
 				D04058281B72D71700494FCD /* LogLevel.swift in Sources */,
+				D0604CD81B79538A00E50E97 /* AspenHelpers.m in Sources */,
 				D04058261B72D6CB00494FCD /* ConsoleLogger.swift in Sources */,
 				D040582A1B72DFB400494FCD /* FileLogger.swift in Sources */,
 			);

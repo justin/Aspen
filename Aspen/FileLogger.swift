@@ -23,14 +23,15 @@
 import Foundation
 
 @objc
-public class FileLogger: LogInterface
+public class FileLogger: NSObject, LogInterface
 {
     public var fileURL:NSURL?
     
     private var fileHandle:NSFileHandle?
     
-    public init()
+    public override init()
     {
+        super.init()
         let locale = NSLocale(localeIdentifier: "en_US_POSIX")
         
         let timeFormatter = NSDateFormatter()
@@ -52,7 +53,6 @@ public class FileLogger: LogInterface
         closeFile()
     }
 
-    
     public func log(message: String)
     {
         if let handle = fileHandle

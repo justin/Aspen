@@ -49,7 +49,7 @@ public class Logger
         self.level = LogLevel.getLevel(level)
     }
     
-    public func log(logLevel: DefaultLogLevel, message: String)
+    public func log(logLevel: DefaultLogLevel, message: String, argumentArray: [CVarArgType])
     {
         if (logLevel.rawValue >= level.level.rawValue)
         {
@@ -60,35 +60,35 @@ public class Logger
         }
     }
     
-    public func verbose(message: String)
+    public func verbose(message: String, argumentArray: CVarArgType...)
     {
         let logLevel:DefaultLogLevel = .Verbose
         let logMessage = formatter.formatLog(self, level: logLevel, message: message)
 
-        self.log(logLevel, message: logMessage)
+        log(logLevel, message: logMessage, argumentArray:argumentArray)
     }
     
-    public func info(message: String)
+    public func info(message: String, argumentArray: CVarArgType...)
     {
         let logLevel:DefaultLogLevel = .Info
         let logMessage = formatter.formatLog(self, level: logLevel, message: message)
 
-        self.log(logLevel, message: logMessage)
+        log(logLevel, message: logMessage, argumentArray:argumentArray)
     }
     
-    public func warn(message: String)
+    public func warn(message: String, argumentArray: CVarArgType...)
     {
         let logLevel:DefaultLogLevel = .Warning
         let logMessage = formatter.formatLog(self, level: logLevel, message: message)
         
-        self.log(logLevel, message: logMessage)
+        log(logLevel, message: logMessage, argumentArray:argumentArray)
     }
     
-    public func error(message: String)
+    public func error(message: String, argumentArray: CVarArgType...)
     {
         let logLevel:DefaultLogLevel = .Error
         let logMessage = formatter.formatLog(self, level: logLevel, message: message)
 
-        self.log(logLevel, message: logMessage)
+        log(logLevel, message: logMessage, argumentArray:argumentArray)
     }
 }

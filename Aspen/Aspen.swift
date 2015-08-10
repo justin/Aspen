@@ -23,7 +23,7 @@
 import Foundation
 
 @objc
-public class Aspen
+public class Aspen: NSObject
 {
     static var globalLogger = Logger(name: "Shared", level: .Info)
     
