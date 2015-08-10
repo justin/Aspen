@@ -1,5 +1,7 @@
 # Aspen
 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 I got annoyed with Lumberjack, so I made my own logging framework called Aspen.
 
 ### Features
