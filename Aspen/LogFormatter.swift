@@ -22,7 +22,7 @@
 
 import Foundation
 
-@objc
+
 public class LogFormatter
 {
     public var timeFormatter:NSDateFormatter

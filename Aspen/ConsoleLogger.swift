@@ -32,6 +32,6 @@ public class ConsoleLogger: NSObject, LogInterface
     
     public func log(message: String)
     {
-        println(message)
+        print(message)
     }
 }

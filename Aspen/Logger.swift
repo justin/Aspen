@@ -22,7 +22,7 @@
 
 import Foundation
 
-@objc
+
 public class Logger
 {
     public var level: LogLevel
