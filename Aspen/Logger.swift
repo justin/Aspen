@@ -22,8 +22,8 @@
 
 import Foundation
 
-
-public class Logger
+@objc
+public class Logger: NSObject
 {
     public var level: LogLevel
     public var formatter: LogFormatter

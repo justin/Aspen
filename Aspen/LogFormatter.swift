@@ -22,18 +22,20 @@
 
 import Foundation
 
-
-public class LogFormatter
+@objc
+public class LogFormatter: NSObject
 {
     public var timeFormatter:NSDateFormatter
     
-    public init()
+    public override init()
     {
         let locale = NSLocale(localeIdentifier: "en_US_POSIX")
         
         timeFormatter = NSDateFormatter()
         timeFormatter.locale = locale
         timeFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        
+        super.init()
     }
     
     public func formatLog(logger: Logger, level: DefaultLogLevel, message: String) -> String

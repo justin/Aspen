@@ -31,7 +31,8 @@ public enum DefaultLogLevel: Int
     case Error = 500
 }
 
-public class LogLevel
+@objc
+public class LogLevel: NSObject
 {
     public var level: DefaultLogLevel
     public var name: String
