@@ -22,7 +22,7 @@
 
 @import Foundation;
 
-extern void AspenVerbose(NSString *message, ...);
-extern void AspenInfo(NSString *message, ...);
-extern void AspenWarn(NSString *message, ...);
-extern void AspenError(NSString *message, ...);
+extern void AspenVerbose(NSString *message, ...) NS_FORMAT_FUNCTION(1,2);
+extern void AspenInfo(NSString *message, ...) NS_FORMAT_FUNCTION(1,2);
+extern void AspenWarn(NSString *message, ...) NS_FORMAT_FUNCTION(1,2);
+extern void AspenError(NSString *message, ...) NS_FORMAT_FUNCTION(1,2);

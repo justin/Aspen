@@ -7,6 +7,7 @@ void AspenVerbose(NSString *message, ...)
     va_start(args, message);
     va_end(args);
     NSString *formattedMessage = [[NSString alloc] initWithFormat:message arguments:args];
+
     [Aspen verbose:formattedMessage];
 }
 
@@ -36,5 +37,6 @@ void AspenError(NSString *message, ...)
     va_start(args, message);
     va_end(args);
     NSString *formattedMessage = [[NSString alloc] initWithFormat:message arguments:args];
+
     [Aspen error:formattedMessage];
 }
