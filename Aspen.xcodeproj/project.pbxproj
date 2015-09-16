@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D02EC4551BAA122600415629 /* Aspen.h in Headers */ = {isa = PBXBuildFile; fileRef = D02EC4541BAA122600415629 /* Aspen.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D02EC45C1BAA122600415629 /* Aspen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02EC4521BAA122600415629 /* Aspen.framework */; settings = {ASSET_TAGS = (); }; };
+		D02EC4611BAA122600415629 /* Aspen_MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02EC4601BAA122600415629 /* Aspen_MacTests.swift */; };
+		D02EC4691BAA12B400415629 /* AspenHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = D0604CD51B79538A00E50E97 /* AspenHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D02EC46A1BAA12B900415629 /* AspenHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D0604CD61B79538A00E50E97 /* AspenHelpers.m */; settings = {ASSET_TAGS = (); }; };
+		D02EC46B1BAA12BC00415629 /* LogInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040582B1B72E44A00494FCD /* LogInterface.swift */; settings = {ASSET_TAGS = (); }; };
+		D02EC46C1BAA12C000415629 /* ConsoleLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04058251B72D6CB00494FCD /* ConsoleLogger.swift */; settings = {ASSET_TAGS = (); }; };
+		D02EC46D1BAA12C200415629 /* FileLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04058291B72DFB400494FCD /* FileLogger.swift */; settings = {ASSET_TAGS = (); }; };
+		D02EC46E1BAA12D900415629 /* Aspen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04058231B72C8A500494FCD /* Aspen.swift */; settings = {ASSET_TAGS = (); }; };
+		D02EC46F1BAA12D900415629 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040582D1B72E76500494FCD /* Logger.swift */; settings = {ASSET_TAGS = (); }; };
+		D02EC4701BAA12D900415629 /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04058271B72D71700494FCD /* LogLevel.swift */; settings = {ASSET_TAGS = (); }; };
+		D02EC4711BAA12D900415629 /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D041E3731B73B918002D6FB7 /* LogFormatter.swift */; settings = {ASSET_TAGS = (); }; };
 		D040580D1B72C86400494FCD /* Aspen.h in Headers */ = {isa = PBXBuildFile; fileRef = D040580C1B72C86400494FCD /* Aspen.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D04058131B72C86400494FCD /* Aspen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04058071B72C86400494FCD /* Aspen.framework */; };
 		D040581A1B72C86400494FCD /* AspenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04058191B72C86400494FCD /* AspenTests.swift */; };
@@ -22,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D02EC45D1BAA122600415629 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D04057FE1B72C86400494FCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D02EC4511BAA122600415629;
+			remoteInfo = "Aspen Mac";
+		};
 		D04058141B72C86400494FCD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D04057FE1B72C86400494FCD /* Project object */;
@@ -32,6 +51,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D02EC4521BAA122600415629 /* Aspen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Aspen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D02EC4541BAA122600415629 /* Aspen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Aspen.h; sourceTree = "<group>"; };
+		D02EC4561BAA122600415629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D02EC45B1BAA122600415629 /* Aspen MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aspen MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D02EC4601BAA122600415629 /* Aspen_MacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aspen_MacTests.swift; sourceTree = "<group>"; };
+		D02EC4621BAA122600415629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D04058071B72C86400494FCD /* Aspen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Aspen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D040580B1B72C86400494FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D040580C1B72C86400494FCD /* Aspen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Aspen.h; sourceTree = "<group>"; };
@@ -50,6 +75,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D02EC44E1BAA122600415629 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D02EC4581BAA122600415629 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D02EC45C1BAA122600415629 /* Aspen.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D04058031B72C86400494FCD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -68,11 +108,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D02EC4531BAA122600415629 /* Aspen Mac */ = {
+			isa = PBXGroup;
+			children = (
+				D02EC4541BAA122600415629 /* Aspen.h */,
+				D02EC4561BAA122600415629 /* Info.plist */,
+			);
+			path = "Aspen Mac";
+			sourceTree = "<group>";
+		};
+		D02EC45F1BAA122600415629 /* Aspen MacTests */ = {
+			isa = PBXGroup;
+			children = (
+				D02EC4601BAA122600415629 /* Aspen_MacTests.swift */,
+				D02EC4621BAA122600415629 /* Info.plist */,
+			);
+			path = "Aspen MacTests";
+			sourceTree = "<group>";
+		};
 		D04057FD1B72C86400494FCD = {
 			isa = PBXGroup;
 			children = (
 				D04058091B72C86400494FCD /* Aspen */,
 				D04058161B72C86400494FCD /* AspenTests */,
+				D02EC4531BAA122600415629 /* Aspen Mac */,
+				D02EC45F1BAA122600415629 /* Aspen MacTests */,
 				D04058081B72C86400494FCD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +142,8 @@
 			children = (
 				D04058071B72C86400494FCD /* Aspen.framework */,
 				D04058121B72C86400494FCD /* AspenTests.xctest */,
+				D02EC4521BAA122600415629 /* Aspen.framework */,
+				D02EC45B1BAA122600415629 /* Aspen MacTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +218,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		D02EC44F1BAA122600415629 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D02EC4691BAA12B400415629 /* AspenHelpers.h in Headers */,
+				D02EC4551BAA122600415629 /* Aspen.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D04058041B72C86400494FCD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -168,9 +239,45 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D04058061B72C86400494FCD /* Aspen */ = {
+		D02EC4511BAA122600415629 /* Aspen Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D040581D1B72C86400494FCD /* Build configuration list for PBXNativeTarget "Aspen" */;
+			buildConfigurationList = D02EC4671BAA122600415629 /* Build configuration list for PBXNativeTarget "Aspen Mac" */;
+			buildPhases = (
+				D02EC44D1BAA122600415629 /* Sources */,
+				D02EC44E1BAA122600415629 /* Frameworks */,
+				D02EC44F1BAA122600415629 /* Headers */,
+				D02EC4501BAA122600415629 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Aspen Mac";
+			productName = "Aspen Mac";
+			productReference = D02EC4521BAA122600415629 /* Aspen.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D02EC45A1BAA122600415629 /* Aspen MacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D02EC4681BAA122600415629 /* Build configuration list for PBXNativeTarget "Aspen MacTests" */;
+			buildPhases = (
+				D02EC4571BAA122600415629 /* Sources */,
+				D02EC4581BAA122600415629 /* Frameworks */,
+				D02EC4591BAA122600415629 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D02EC45E1BAA122600415629 /* PBXTargetDependency */,
+			);
+			name = "Aspen MacTests";
+			productName = "Aspen MacTests";
+			productReference = D02EC45B1BAA122600415629 /* Aspen MacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D04058061B72C86400494FCD /* Aspen iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D040581D1B72C86400494FCD /* Build configuration list for PBXNativeTarget "Aspen iOS" */;
 			buildPhases = (
 				D04058021B72C86400494FCD /* Sources */,
 				D04058031B72C86400494FCD /* Frameworks */,
@@ -181,7 +288,7 @@
 			);
 			dependencies = (
 			);
-			name = Aspen;
+			name = "Aspen iOS";
 			productName = Aspen;
 			productReference = D04058071B72C86400494FCD /* Aspen.framework */;
 			productType = "com.apple.product-type.framework";
@@ -215,6 +322,12 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Second Gear";
 				TargetAttributes = {
+					D02EC4511BAA122600415629 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					D02EC45A1BAA122600415629 = {
+						CreatedOnToolsVersion = 7.0;
+					};
 					D04058061B72C86400494FCD = {
 						CreatedOnToolsVersion = 6.4;
 					};
@@ -235,13 +348,29 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D04058061B72C86400494FCD /* Aspen */,
+				D04058061B72C86400494FCD /* Aspen iOS */,
 				D04058111B72C86400494FCD /* AspenTests */,
+				D02EC4511BAA122600415629 /* Aspen Mac */,
+				D02EC45A1BAA122600415629 /* Aspen MacTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D02EC4501BAA122600415629 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D02EC4591BAA122600415629 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D04058051B72C86400494FCD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -259,6 +388,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D02EC44D1BAA122600415629 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D02EC46C1BAA12C000415629 /* ConsoleLogger.swift in Sources */,
+				D02EC46F1BAA12D900415629 /* Logger.swift in Sources */,
+				D02EC46B1BAA12BC00415629 /* LogInterface.swift in Sources */,
+				D02EC4711BAA12D900415629 /* LogFormatter.swift in Sources */,
+				D02EC46A1BAA12B900415629 /* AspenHelpers.m in Sources */,
+				D02EC4701BAA12D900415629 /* LogLevel.swift in Sources */,
+				D02EC46D1BAA12C200415629 /* FileLogger.swift in Sources */,
+				D02EC46E1BAA12D900415629 /* Aspen.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D02EC4571BAA122600415629 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D02EC4611BAA122600415629 /* Aspen_MacTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D04058021B72C86400494FCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,14 +437,87 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D02EC45E1BAA122600415629 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D02EC4511BAA122600415629 /* Aspen Mac */;
+			targetProxy = D02EC45D1BAA122600415629 /* PBXContainerItemProxy */;
+		};
 		D04058151B72C86400494FCD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D04058061B72C86400494FCD /* Aspen */;
+			target = D04058061B72C86400494FCD /* Aspen iOS */;
 			targetProxy = D04058141B72C86400494FCD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		D02EC4631BAA122600415629 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Aspen Mac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.secondgear.Aspen-Mac";
+				PRODUCT_NAME = Aspen;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D02EC4641BAA122600415629 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Aspen Mac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.secondgear.Aspen-Mac";
+				PRODUCT_NAME = Aspen;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D02EC4651BAA122600415629 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "Aspen MacTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.secondgear.Aspen-MacTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D02EC4661BAA122600415629 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Aspen MacTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.secondgear.Aspen-MacTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		D040581B1B72C86400494FCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -396,7 +621,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.secondgear.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Aspen;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -415,7 +640,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.secondgear.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Aspen;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -455,6 +680,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D02EC4671BAA122600415629 /* Build configuration list for PBXNativeTarget "Aspen Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D02EC4631BAA122600415629 /* Debug */,
+				D02EC4641BAA122600415629 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D02EC4681BAA122600415629 /* Build configuration list for PBXNativeTarget "Aspen MacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D02EC4651BAA122600415629 /* Debug */,
+				D02EC4661BAA122600415629 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D04058011B72C86400494FCD /* Build configuration list for PBXProject "Aspen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -464,7 +705,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D040581D1B72C86400494FCD /* Build configuration list for PBXNativeTarget "Aspen" */ = {
+		D040581D1B72C86400494FCD /* Build configuration list for PBXNativeTarget "Aspen iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D040581E1B72C86400494FCD /* Debug */,
