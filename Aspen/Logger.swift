@@ -62,7 +62,7 @@ public class Logger: NSObject
     
     public func verbose(message: String)
     {
-        let logLevel:DefaultLogLevel = .Verbose
+        let logLevel = DefaultLogLevel.Verbose
         let logMessage = formatter.formatLog(self, level: logLevel, message: message)
 
         log(logLevel, message: logMessage)
@@ -70,7 +70,7 @@ public class Logger: NSObject
     
     public func info(message: String)
     {
-        let logLevel:DefaultLogLevel = .Info
+        let logLevel = DefaultLogLevel.Info
         let logMessage = formatter.formatLog(self, level: logLevel, message: message)
 
         log(logLevel, message: logMessage)
@@ -78,7 +78,7 @@ public class Logger: NSObject
     
     public func warn(message: String)
     {
-        let logLevel:DefaultLogLevel = .Warning
+        let logLevel = DefaultLogLevel.Warning
         let logMessage = formatter.formatLog(self, level: logLevel, message: message)
         
         log(logLevel, message: logMessage)
@@ -86,7 +86,7 @@ public class Logger: NSObject
     
     public func error(message: String)
     {
-        let logLevel:DefaultLogLevel = .Error
+        let logLevel = DefaultLogLevel.Error
         let logMessage = formatter.formatLog(self, level: logLevel, message: message)
 
         log(logLevel, message: logMessage)
