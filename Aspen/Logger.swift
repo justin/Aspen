@@ -32,7 +32,8 @@ public class Logger: NSObject
     
     internal var activeLoggers:[LogInterface] = [LogInterface]()
     
-    
+    private let queue = dispatch_queue_create("com.secondgear.Aspen", DISPATCH_QUEUE_SERIAL)
+
     override init()
     {
         fatalError("Please use init(name:, level:) to initialize a new Logger instance")
@@ -63,7 +64,9 @@ public class Logger: NSObject
         {
             for logger in activeLoggers
             {
-                logger.log(message)
+                dispatch_async(queue) {
+                    logger.log(message)
+                }
             }
         }
     }
