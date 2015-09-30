@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D04058061B72C86400494FCD"
-               BuildableName = "Aspen.framework"
-               BlueprintName = "Aspen"
+               BuildableName = "Aspen iOS.framework"
+               BlueprintName = "Aspen iOS"
                ReferencedContainer = "container:Aspen.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -57,8 +57,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D04058061B72C86400494FCD"
-            BuildableName = "Aspen.framework"
-            BlueprintName = "Aspen"
+            BuildableName = "Aspen iOS.framework"
+            BlueprintName = "Aspen iOS"
             ReferencedContainer = "container:Aspen.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -79,8 +79,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D04058061B72C86400494FCD"
-            BuildableName = "Aspen.framework"
-            BlueprintName = "Aspen"
+            BuildableName = "Aspen iOS.framework"
+            BlueprintName = "Aspen iOS"
             ReferencedContainer = "container:Aspen.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -97,8 +97,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D04058061B72C86400494FCD"
-            BuildableName = "Aspen.framework"
-            BlueprintName = "Aspen"
+            BuildableName = "Aspen iOS.framework"
+            BlueprintName = "Aspen iOS"
             ReferencedContainer = "container:Aspen.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
