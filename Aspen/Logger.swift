@@ -70,33 +70,33 @@ public class Logger: NSObject
     
     public func verbose(message: String)
     {
-        let logLevel = DefaultLogLevel.Verbose
-        let logMessage = formatter.formatLog(self, level: logLevel, message: message)
-
-        log(logLevel, message: logMessage)
+        outputToLog(.Verbose, message: message)
     }
     
     public func info(message: String)
     {
-        let logLevel = DefaultLogLevel.Info
-        let logMessage = formatter.formatLog(self, level: logLevel, message: message)
-
-        log(logLevel, message: logMessage)
+        outputToLog(.Info, message: message)
     }
     
     public func warn(message: String)
     {
-        let logLevel = DefaultLogLevel.Warning
-        let logMessage = formatter.formatLog(self, level: logLevel, message: message)
-        
-        log(logLevel, message: logMessage)
+        outputToLog(.Warning, message: message)
     }
     
     public func error(message: String)
     {
-        let logLevel = DefaultLogLevel.Error
+        outputToLog(.Error, message: message)
+    }
+    
+    // MARK: Private/Convenience
+    // ====================================
+    // Private/Convenience
+    // ====================================
+    private func outputToLog(level:DefaultLogLevel, message:String)
+    {
+        let logLevel = level
         let logMessage = formatter.formatLog(self, level: logLevel, message: message)
-
+        
         log(logLevel, message: logMessage)
     }
 }
