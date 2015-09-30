@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D01DFAA21BBC445E00B4D1ED /* LogLevelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01DFAA11BBC445E00B4D1ED /* LogLevelTests.swift */; settings = {ASSET_TAGS = (); }; };
 		D040580D1B72C86400494FCD /* Aspen.h in Headers */ = {isa = PBXBuildFile; fileRef = D040580C1B72C86400494FCD /* Aspen.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D04058131B72C86400494FCD /* Aspen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04058071B72C86400494FCD /* Aspen.framework */; };
 		D040581A1B72C86400494FCD /* AspenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04058191B72C86400494FCD /* AspenTests.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D01DFAA11BBC445E00B4D1ED /* LogLevelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogLevelTests.swift; sourceTree = "<group>"; };
 		D04058071B72C86400494FCD /* Aspen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Aspen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D040580B1B72C86400494FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D040580C1B72C86400494FCD /* Aspen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Aspen.h; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				D04058191B72C86400494FCD /* AspenTests.swift */,
+				D01DFAA11BBC445E00B4D1ED /* LogLevelTests.swift */,
 				D04058171B72C86400494FCD /* Supporting Files */,
 			);
 			path = AspenTests;
@@ -279,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D040581A1B72C86400494FCD /* AspenTests.swift in Sources */,
+				D01DFAA21BBC445E00B4D1ED /* LogLevelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
