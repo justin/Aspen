@@ -32,11 +32,19 @@ public class Logger: NSObject
     
     internal var activeLoggers:[LogInterface] = [LogInterface]()
     
+    
+    override init()
+    {
+        fatalError("Please use init(name:, level:) to initialize a new Logger instance")
+    }
+    
     public init(name: String, level: DefaultLogLevel = .Info)
     {
         self.name = name
         self.level = LogLevel.getLevel(level)
         self.formatter = LogFormatter()
+        
+        super.init()
     }
     
     public func registerLogger(logger: LogInterface)
