@@ -40,10 +40,12 @@ public class LogFormatter: NSObject
     
     public func formatLog(logger: Logger, level: DefaultLogLevel, message: String) -> String
     {
-        let levelName = LogLevel.getLevel(level).label
+        let logLevel = LogLevel.getLevel(level)
+        let levelName = logLevel.label
+        let emoji = logLevel.emojiIdentifier()
         let now = NSDate()
         let timeString = timeFormatter.stringFromDate(now)
         
-        return "\(timeString) — [\(levelName)] \(message)"
+        return "\(timeString) — [\(emoji)\(levelName)\(emoji)] \(message)"
     }
 }

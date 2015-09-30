@@ -65,15 +65,23 @@ public class LogLevel: NSObject
         }
     }
     
-    public func desciption() -> String
+    public func emojiIdentifier() -> String
     {
-        return "LogLevel=\(label)"
+        switch level
+        {
+        case .Verbose:
+            return "🚧"
+        case .Info:
+            return "☝️"
+        case .Warning:
+            return "⚠️"
+        case .Error:
+            return "🚨"
+        }
     }
     
-    private static func create(level: DefaultLogLevel, name: String, label: String) -> LogLevel
+   private static func create(level: DefaultLogLevel, name: String, label: String) -> LogLevel
     {
         return LogLevel(level:level, name: name, label: label)
     }
-    
-    
 }
