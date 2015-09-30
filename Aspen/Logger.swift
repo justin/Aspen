@@ -30,7 +30,7 @@ public class Logger: NSObject
     
     internal var name: String
     
-    internal var activeLoggers:[LogInterface] = Array<LogInterface>()
+    internal var activeLoggers:[LogInterface] = [LogInterface]()
     
     public init(name: String, level: DefaultLogLevel = .Info)
     {
