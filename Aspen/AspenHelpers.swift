@@ -22,30 +22,15 @@
 
 import Foundation
 
-@objc
-public class Aspen: NSObject
+/**
+	Abstractions of the private Aspen global logger to facilitate late/lazy evaluation of
+	vararg log messages by the AspenHelpers C macros.
+*/
+extension Aspen
 {
-	static var globalLogger = Logger(name: "Shared", level: .Info)
+	@objc(willLog:)
+	public class func willLog(level: DefaultLogLevel) -> Bool { return self.globalLogger.willLog(level) }
 
-	public class func registerLogger(logger: LogInterface)
-	{
-		globalLogger.registerLogger(logger)
-	}
-
-	public class func setLoggingLevel(level: DefaultLogLevel)
-	{
-		globalLogger.setLoggingLevel(level)
-	}
-
-	public class func getLogger(logName:String, level:DefaultLogLevel) -> Logger
-	{
-		let logger = Logger(name: logName, level: level)
-		logger.activeLoggers += globalLogger.activeLoggers
-		return logger
-	}
+	@objc(logWithLevel:message:)
+	public class func log(level: DefaultLogLevel, message: String!) { self.globalLogger.log(level, message: message) }	
 }
-
-public func aspenVerbose(@autoclosure message: () -> String) { Aspen.globalLogger.verbose(message) }
-public func aspenInfo(@autoclosure message: () -> String) { Aspen.globalLogger.info(message) }
-public func aspenWarn(@autoclosure message: () -> String) { Aspen.globalLogger.warn(message) }
-public func aspenError(@autoclosure message: () -> String) { Aspen.globalLogger.error(message) }

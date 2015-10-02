@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D6387B31BBD064F00CDE359 /* AspenHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D6387B11BBD064F00CDE359 /* AspenHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D6387B41BBD064F00CDE359 /* AspenHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6387B21BBD064F00CDE359 /* AspenHelpers.swift */; settings = {ASSET_TAGS = (); }; };
+		6D6387B71BBD066200CDE359 /* AspenHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6387B61BBD066200CDE359 /* AspenHelperTests.m */; settings = {ASSET_TAGS = (); }; };
+		6D6387B81BBD066200CDE359 /* AspenHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6387B61BBD066200CDE359 /* AspenHelperTests.m */; settings = {ASSET_TAGS = (); }; };
+		6D6387C11BBD8A1300CDE359 /* AspenTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6387C01BBD8A1300CDE359 /* AspenTestCase.swift */; settings = {ASSET_TAGS = (); }; };
+		6D6387C21BBD8A1300CDE359 /* AspenTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6387C01BBD8A1300CDE359 /* AspenTestCase.swift */; settings = {ASSET_TAGS = (); }; };
 		D01DFAA21BBC445E00B4D1ED /* LogLevelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01DFAA11BBC445E00B4D1ED /* LogLevelTests.swift */; settings = {ASSET_TAGS = (); }; };
 		D040580D1B72C86400494FCD /* Aspen.h in Headers */ = {isa = PBXBuildFile; fileRef = D040580C1B72C86400494FCD /* Aspen.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D04058131B72C86400494FCD /* Aspen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04058071B72C86400494FCD /* Aspen.framework */; };
@@ -18,8 +24,6 @@
 		D040582C1B72E44A00494FCD /* LogInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040582B1B72E44A00494FCD /* LogInterface.swift */; };
 		D040582E1B72E76500494FCD /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040582D1B72E76500494FCD /* Logger.swift */; };
 		D041E3741B73B918002D6FB7 /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D041E3731B73B918002D6FB7 /* LogFormatter.swift */; };
-		D0604CD71B79538A00E50E97 /* AspenHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = D0604CD51B79538A00E50E97 /* AspenHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0604CD81B79538A00E50E97 /* AspenHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D0604CD61B79538A00E50E97 /* AspenHelpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D6387B11BBD064F00CDE359 /* AspenHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AspenHelpers.h; sourceTree = "<group>"; };
+		6D6387B21BBD064F00CDE359 /* AspenHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AspenHelpers.swift; sourceTree = "<group>"; };
+		6D6387B51BBD066200CDE359 /* AspenTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AspenTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		6D6387B61BBD066200CDE359 /* AspenHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AspenHelperTests.m; sourceTree = "<group>"; };
+		6D6387C01BBD8A1300CDE359 /* AspenTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AspenTestCase.swift; sourceTree = "<group>"; };
 		D01DFAA11BBC445E00B4D1ED /* LogLevelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogLevelTests.swift; sourceTree = "<group>"; };
-
 		D04058071B72C86400494FCD /* Aspen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Aspen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D040580B1B72C86400494FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D040580C1B72C86400494FCD /* Aspen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Aspen.h; sourceTree = "<group>"; };
@@ -55,8 +63,6 @@
 		D040582B1B72E44A00494FCD /* LogInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInterface.swift; sourceTree = "<group>"; };
 		D040582D1B72E76500494FCD /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		D041E3731B73B918002D6FB7 /* LogFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFormatter.swift; sourceTree = "<group>"; };
-		D0604CD51B79538A00E50E97 /* AspenHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AspenHelpers.h; sourceTree = "<group>"; };
-		D0604CD61B79538A00E50E97 /* AspenHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AspenHelpers.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +77,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D02EC45C1BAA122600415629 /* Aspen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,11 +98,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D6387B01BBD05F400CDE359 /* C Support */ = {
+			isa = PBXGroup;
+			children = (
+				6D6387B21BBD064F00CDE359 /* AspenHelpers.swift */,
+				6D6387B11BBD064F00CDE359 /* AspenHelpers.h */,
+			);
+			name = "C Support";
+			sourceTree = "<group>";
+		};
 		D02EC4531BAA122600415629 /* Aspen Mac */ = {
 			isa = PBXGroup;
 			children = (
-				D02EC4541BAA122600415629 /* Aspen.h */,
-				D02EC4561BAA122600415629 /* Info.plist */,
 			);
 			path = "Aspen Mac";
 			sourceTree = "<group>";
@@ -105,8 +117,6 @@
 		D02EC45F1BAA122600415629 /* Aspen MacTests */ = {
 			isa = PBXGroup;
 			children = (
-				D02EC4601BAA122600415629 /* Aspen_MacTests.swift */,
-				D02EC4621BAA122600415629 /* Info.plist */,
 			);
 			path = "Aspen MacTests";
 			sourceTree = "<group>";
@@ -127,8 +137,6 @@
 			children = (
 				D04058071B72C86400494FCD /* Aspen.framework */,
 				D04058121B72C86400494FCD /* AspenTests.xctest */,
-				D02EC4521BAA122600415629 /* Aspen.framework */,
-				D02EC45B1BAA122600415629 /* Aspen MacTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,6 +148,7 @@
 				D041E3771B73DBF9002D6FB7 /* Core */,
 				D041E3761B73DBE5002D6FB7 /* Log Destinations */,
 				D041E3751B73DBD8002D6FB7 /* Protocols */,
+				6D6387B01BBD05F400CDE359 /* C Support */,
 				D040580A1B72C86400494FCD /* Supporting Files */,
 			);
 			path = Aspen;
@@ -150,8 +159,6 @@
 			children = (
 				D040580C1B72C86400494FCD /* Aspen.h */,
 				D040580B1B72C86400494FCD /* Info.plist */,
-				D0604CD51B79538A00E50E97 /* AspenHelpers.h */,
-				D0604CD61B79538A00E50E97 /* AspenHelpers.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -159,8 +166,10 @@
 		D04058161B72C86400494FCD /* AspenTests */ = {
 			isa = PBXGroup;
 			children = (
+				6D6387C01BBD8A1300CDE359 /* AspenTestCase.swift */,
 				D04058191B72C86400494FCD /* AspenTests.swift */,
 				D01DFAA11BBC445E00B4D1ED /* LogLevelTests.swift */,
+				6D6387B61BBD066200CDE359 /* AspenHelperTests.m */,
 				D04058171B72C86400494FCD /* Supporting Files */,
 			);
 			path = AspenTests;
@@ -169,6 +178,7 @@
 		D04058171B72C86400494FCD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6D6387B51BBD066200CDE359 /* AspenTests-Bridging-Header.h */,
 				D04058181B72C86400494FCD /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -208,8 +218,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D02EC4691BAA12B400415629 /* AspenHelpers.h in Headers */,
-				D02EC4551BAA122600415629 /* Aspen.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +225,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0604CD71B79538A00E50E97 /* AspenHelpers.h in Headers */,
+				6D6387B31BBD064F00CDE359 /* AspenHelpers.h in Headers */,
 				D040580D1B72C86400494FCD /* Aspen.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,7 +248,6 @@
 			);
 			name = "Aspen Mac";
 			productName = "Aspen Mac";
-			productReference = D02EC4521BAA122600415629 /* Aspen.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D02EC45A1BAA122600415629 /* Aspen MacTests */ = {
@@ -258,7 +265,6 @@
 			);
 			name = "Aspen MacTests";
 			productName = "Aspen MacTests";
-			productReference = D02EC45B1BAA122600415629 /* Aspen MacTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		D04058061B72C86400494FCD /* Aspen iOS */ = {
@@ -378,14 +384,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D02EC46C1BAA12C000415629 /* ConsoleLogger.swift in Sources */,
-				D02EC46F1BAA12D900415629 /* Logger.swift in Sources */,
-				D02EC46B1BAA12BC00415629 /* LogInterface.swift in Sources */,
-				D02EC4711BAA12D900415629 /* LogFormatter.swift in Sources */,
-				D02EC46A1BAA12B900415629 /* AspenHelpers.m in Sources */,
-				D02EC4701BAA12D900415629 /* LogLevel.swift in Sources */,
-				D02EC46D1BAA12C200415629 /* FileLogger.swift in Sources */,
-				D02EC46E1BAA12D900415629 /* Aspen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +391,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D02EC4611BAA122600415629 /* Aspen_MacTests.swift in Sources */,
+				6D6387B81BBD066200CDE359 /* AspenHelperTests.m in Sources */,
+				6D6387C21BBD8A1300CDE359 /* AspenTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,9 +405,9 @@
 				D040582C1B72E44A00494FCD /* LogInterface.swift in Sources */,
 				D041E3741B73B918002D6FB7 /* LogFormatter.swift in Sources */,
 				D04058281B72D71700494FCD /* LogLevel.swift in Sources */,
-				D0604CD81B79538A00E50E97 /* AspenHelpers.m in Sources */,
 				D04058261B72D6CB00494FCD /* ConsoleLogger.swift in Sources */,
 				D040582A1B72DFB400494FCD /* FileLogger.swift in Sources */,
+				6D6387B41BBD064F00CDE359 /* AspenHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +417,8 @@
 			files = (
 				D040581A1B72C86400494FCD /* AspenTests.swift in Sources */,
 				D01DFAA21BBC445E00B4D1ED /* LogLevelTests.swift in Sources */,
+				6D6387C11BBD8A1300CDE359 /* AspenTestCase.swift in Sources */,
+				6D6387B71BBD066200CDE359 /* AspenHelperTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +482,7 @@
 		D02EC4651BAA122600415629 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				INFOPLIST_FILE = "Aspen MacTests/Info.plist";
@@ -489,12 +491,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.secondgear.Aspen-MacTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		D02EC4661BAA122600415629 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Aspen MacTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -635,10 +639,7 @@
 		D04058211B72C86400494FCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -647,20 +648,20 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.secondgear.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AspenTests/AspenTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		D04058221B72C86400494FCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AspenTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.secondgear.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AspenTests/AspenTests-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -674,6 +675,7 @@
 				D02EC4641BAA122600415629 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D02EC4681BAA122600415629 /* Build configuration list for PBXNativeTarget "Aspen MacTests" */ = {
 			isa = XCConfigurationList;
@@ -682,6 +684,7 @@
 				D02EC4661BAA122600415629 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D04058011B72C86400494FCD /* Build configuration list for PBXProject "Aspen" */ = {
 			isa = XCConfigurationList;
