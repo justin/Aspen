@@ -25,81 +25,85 @@ import Foundation
 @objc
 public class Logger: NSObject
 {
-    public var level: LogLevel
-    public var formatter: LogFormatter
-    
-    internal var name: String
-    
-    internal var activeLoggers:[LogInterface] = [LogInterface]()
-    
-    private let queue = dispatch_queue_create("com.secondgear.Aspen", DISPATCH_QUEUE_SERIAL)
+	public var level: LogLevel
+	public var formatter: LogFormatter
 
-    override init()
-    {
-        fatalError("Please use init(name:, level:) to initialize a new Logger instance")
-    }
-    
-    public init(name: String, level: DefaultLogLevel = .Info)
-    {
-        self.name = name
-        self.level = LogLevel.getLevel(level)
-        self.formatter = LogFormatter()
-        
-        super.init()
-    }
-    
-    public func registerLogger(logger: LogInterface)
-    {
-        activeLoggers.append(logger)
-    }
-    
-    public func setLoggingLevel(level: DefaultLogLevel)
-    {
-        self.level = LogLevel.getLevel(level)
-    }
-    
-    public func log(logLevel: DefaultLogLevel, message: String)
-    {
-        if (logLevel.rawValue >= level.level.rawValue)
-        {
-            for logger in activeLoggers
-            {
-                dispatch_async(queue) {
-                    logger.log(message)
-                }
-            }
-        }
-    }
-    
-    public func verbose(message: String)
-    {
-        outputToLog(.Verbose, message: message)
-    }
-    
-    public func info(message: String)
-    {
-        outputToLog(.Info, message: message)
-    }
-    
-    public func warn(message: String)
-    {
-        outputToLog(.Warning, message: message)
-    }
-    
-    public func error(message: String)
-    {
-        outputToLog(.Error, message: message)
-    }
-    
-    // MARK: Private/Convenience
-    // ====================================
-    // Private/Convenience
-    // ====================================
-    private func outputToLog(level:DefaultLogLevel, message:String)
-    {
-        let logLevel = level
-        let logMessage = formatter.formatLog(self, level: logLevel, message: message)
-        
-        log(logLevel, message: logMessage)
-    }
+	internal var name: String
+
+	internal var activeLoggers: [LogInterface] = [LogInterface]()
+
+	private let queue = dispatch_queue_create("com.secondgear.AspenQueue", DISPATCH_QUEUE_SERIAL)
+
+	override init()
+	{
+		fatalError("Please use init(name:, level:) to initialize a new Logger instance")
+	}
+
+	public init(name: String, level: DefaultLogLevel = .Info)
+	{
+		self.name = name
+		self.level = LogLevel.getLevel(level)
+		self.formatter = LogFormatter()
+
+		super.init()
+	}
+
+	public func registerLogger(logger: LogInterface)
+	{
+		activeLoggers.append(logger)
+	}
+
+	public func setLoggingLevel(level: DefaultLogLevel)
+	{
+		self.level = LogLevel.getLevel(level)
+	}
+
+	func willLog(logLevel: DefaultLogLevel) -> Bool
+	{
+		return logLevel.rawValue >= level.level.rawValue
+	}
+
+	public func log(logLevel: DefaultLogLevel, @autoclosure message: () -> String)
+	{
+		if self.willLog(logLevel)
+		{
+			let constMessage = message()
+			for logger in activeLoggers
+			{
+				dispatch_async(queue) {
+					logger.log(constMessage)
+				}
+			}
+		}
+	}
+
+	public func verbose(@autoclosure message: () -> String)
+	{
+		outputToLog(.Verbose, message: message)
+	}
+
+	public func info(@autoclosure message: () -> String)
+	{
+		outputToLog(.Info, message: message)
+	}
+
+	public func warn(@autoclosure message: () -> String)
+	{
+		outputToLog(.Warning, message: message)
+	}
+
+	public func error(@autoclosure message: () -> String)
+	{
+		outputToLog(.Error, message: message)
+	}
+
+	// MARK: Private/Convenience
+	// ====================================
+	// Private/Convenience
+	// ====================================
+	private func outputToLog(level: DefaultLogLevel, @autoclosure message: () -> String)
+	{
+		let logLevel = level
+		log(logLevel, message: formatter.formatLog(self, level: logLevel, message: message()))
+	}
 }

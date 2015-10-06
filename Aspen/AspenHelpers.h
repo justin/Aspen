@@ -22,7 +22,14 @@
 
 @import Foundation;
 
-extern void AspenVerbose(NSString *message, ...) NS_FORMAT_FUNCTION(1,2);
-extern void AspenInfo(NSString *message, ...) NS_FORMAT_FUNCTION(1,2);
-extern void AspenWarn(NSString *message, ...) NS_FORMAT_FUNCTION(1,2);
-extern void AspenError(NSString *message, ...) NS_FORMAT_FUNCTION(1,2);
+NS_ASSUME_NONNULL_BEGIN
+
+#define AspenVerbose(format, ...) AspenMaybe(DefaultLogLevelVerbose, format, ##__VA_ARGS__)
+#define AspenInfo(format, ...) AspenMaybe(DefaultLogLevelInfo, format, ##__VA_ARGS__)
+#define AspenWarn(format, ...) AspenMaybe(DefaultLogLevelWarning, format, ##__VA_ARGS__)
+#define AspenError(format, ...) AspenMaybe(DefaultLogLevelError, format, ##__VA_ARGS__)
+
+// Do not use AspenMaybe directly; use one of the other macros below
+#define AspenMaybe(level, format, ...) do { if ([Aspen willLog:level]) { [Aspen logWithLevel:level message:[NSString stringWithFormat:format, ##__VA_ARGS__]]; } } while (0)
+
+NS_ASSUME_NONNULL_END
