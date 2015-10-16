@@ -63,7 +63,7 @@ public class Logger: NSObject
 		return logLevel.rawValue >= level.level.rawValue
 	}
 
-	public func log(logLevel: DefaultLogLevel, @autoclosure message: () -> String)
+	func log(logLevel: DefaultLogLevel, @autoclosure message: () -> String)
 	{
 		if activeLoggers.count == 0
 		{
@@ -82,33 +82,32 @@ public class Logger: NSObject
 		}
 	}
 
+	func logFormatted(logLevel: DefaultLogLevel, @autoclosure message: () -> String)
+	{
+		log(logLevel, message: formatter.formatLog(logLevel, message: message()))
+	}
+}
+
+/** Convenience / shorthand logging functions for predefined log levels. */
+extension Logger
+{
 	public func verbose(@autoclosure message: () -> String)
 	{
-		outputToLog(.Verbose, message: message)
+		logFormatted(.Verbose, message: message)
 	}
 
 	public func info(@autoclosure message: () -> String)
 	{
-		outputToLog(.Info, message: message)
+		logFormatted(.Info, message: message)
 	}
 
 	public func warn(@autoclosure message: () -> String)
 	{
-		outputToLog(.Warning, message: message)
+		logFormatted(.Warning, message: message)
 	}
 
 	public func error(@autoclosure message: () -> String)
 	{
-		outputToLog(.Error, message: message)
-	}
-
-	// MARK: Private/Convenience
-	// ====================================
-	// Private/Convenience
-	// ====================================
-	private func outputToLog(level: DefaultLogLevel, @autoclosure message: () -> String)
-	{
-		let logLevel = level
-		log(logLevel, message: formatter.formatLog(self, level: logLevel, message: message()))
+		logFormatted(.Error, message: message)
 	}
 }

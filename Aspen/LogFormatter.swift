@@ -38,7 +38,7 @@ public class LogFormatter: NSObject
         super.init()
     }
     
-    public func formatLog(logger: Logger, level: DefaultLogLevel, message: String) -> String
+    public func formatLog(level: DefaultLogLevel, message: String) -> String
     {
         let logLevel = LogLevel.getLevel(level)
         let levelName = logLevel.label
