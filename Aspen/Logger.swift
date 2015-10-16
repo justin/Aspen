@@ -65,6 +65,11 @@ public class Logger: NSObject
 
 	public func log(logLevel: DefaultLogLevel, @autoclosure message: () -> String)
 	{
+		if activeLoggers.count == 0
+		{
+			print("*** WARNING: log(\(logLevel.rawValue)) invoked with no loggers registered. If you're expecting file logging for forensic purposes, you're losing data. Message was '\(message())'")
+		}
+
 		if self.willLog(logLevel)
 		{
 			let constMessage = message()
