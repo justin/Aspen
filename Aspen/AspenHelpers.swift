@@ -32,5 +32,5 @@ extension Aspen
 	public class func willLog(level: DefaultLogLevel) -> Bool { return self.globalLogger.willLog(level) }
 
 	@objc(logWithLevel:message:)
-	public class func log(level: DefaultLogLevel, message: String!) { self.globalLogger.log(level, message: message) }	
+	public class func log(level: DefaultLogLevel, message: String!) { self.globalLogger.logFormatted(level, message: message) }
 }
