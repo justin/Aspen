@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6D6387B31BBD064F00CDE359 /* AspenHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D6387B11BBD064F00CDE359 /* AspenHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6D6387B41BBD064F00CDE359 /* AspenHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6387B21BBD064F00CDE359 /* AspenHelpers.swift */; settings = {ASSET_TAGS = (); }; };
-		6D6387B71BBD066200CDE359 /* AspenHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6387B61BBD066200CDE359 /* AspenHelperTests.m */; settings = {ASSET_TAGS = (); }; };
-		6D6387B81BBD066200CDE359 /* AspenHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6387B61BBD066200CDE359 /* AspenHelperTests.m */; settings = {ASSET_TAGS = (); }; };
-		6D6387C11BBD8A1300CDE359 /* AspenTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6387C01BBD8A1300CDE359 /* AspenTestCase.swift */; settings = {ASSET_TAGS = (); }; };
-		6D6387C21BBD8A1300CDE359 /* AspenTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6387C01BBD8A1300CDE359 /* AspenTestCase.swift */; settings = {ASSET_TAGS = (); }; };
-		D01DFAA21BBC445E00B4D1ED /* LogLevelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01DFAA11BBC445E00B4D1ED /* LogLevelTests.swift */; settings = {ASSET_TAGS = (); }; };
+		6D6387B41BBD064F00CDE359 /* AspenHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6387B21BBD064F00CDE359 /* AspenHelpers.swift */; };
+		6D6387B71BBD066200CDE359 /* AspenHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6387B61BBD066200CDE359 /* AspenHelperTests.m */; };
+		6D6387B81BBD066200CDE359 /* AspenHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6387B61BBD066200CDE359 /* AspenHelperTests.m */; };
+		6D6387C11BBD8A1300CDE359 /* AspenTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6387C01BBD8A1300CDE359 /* AspenTestCase.swift */; };
+		6D6387C21BBD8A1300CDE359 /* AspenTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6387C01BBD8A1300CDE359 /* AspenTestCase.swift */; };
+		D01DFAA21BBC445E00B4D1ED /* LogLevelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01DFAA11BBC445E00B4D1ED /* LogLevelTests.swift */; };
 		D040580D1B72C86400494FCD /* Aspen.h in Headers */ = {isa = PBXBuildFile; fileRef = D040580C1B72C86400494FCD /* Aspen.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D04058131B72C86400494FCD /* Aspen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04058071B72C86400494FCD /* Aspen.framework */; };
 		D040581A1B72C86400494FCD /* AspenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04058191B72C86400494FCD /* AspenTests.swift */; };
@@ -24,6 +24,18 @@
 		D040582C1B72E44A00494FCD /* LogInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040582B1B72E44A00494FCD /* LogInterface.swift */; };
 		D040582E1B72E76500494FCD /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040582D1B72E76500494FCD /* Logger.swift */; };
 		D041E3741B73B918002D6FB7 /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D041E3731B73B918002D6FB7 /* LogFormatter.swift */; };
+		D09852521BD978FF0037B140 /* Aspen-Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = D09852511BD978FF0037B140 /* Aspen-Mac.h */; };
+		D09852551BD979B80037B140 /* Aspen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04058231B72C8A500494FCD /* Aspen.swift */; };
+		D09852561BD979C10037B140 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040582D1B72E76500494FCD /* Logger.swift */; };
+		D09852571BD979C50037B140 /* ConsoleLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04058251B72D6CB00494FCD /* ConsoleLogger.swift */; };
+		D09852581BD979C50037B140 /* FileLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04058291B72DFB400494FCD /* FileLogger.swift */; };
+		D09852591BD979C90037B140 /* LogInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040582B1B72E44A00494FCD /* LogInterface.swift */; };
+		D098525A1BD979CB0037B140 /* AspenHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6387B21BBD064F00CDE359 /* AspenHelpers.swift */; };
+		D098525B1BD979CF0037B140 /* AspenHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D6387B11BBD064F00CDE359 /* AspenHelpers.h */; };
+		D098525C1BD979DB0037B140 /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04058271B72D71700494FCD /* LogLevel.swift */; };
+		D098525D1BD979DC0037B140 /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D041E3731B73B918002D6FB7 /* LogFormatter.swift */; };
+		D098525F1BD979F90037B140 /* LogLevelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01DFAA11BBC445E00B4D1ED /* LogLevelTests.swift */; };
+		D09852601BD97A4C0037B140 /* AspenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04058191B72C86400494FCD /* AspenTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +75,8 @@
 		D040582B1B72E44A00494FCD /* LogInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInterface.swift; sourceTree = "<group>"; };
 		D040582D1B72E76500494FCD /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		D041E3731B73B918002D6FB7 /* LogFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFormatter.swift; sourceTree = "<group>"; };
+		D09852511BD978FF0037B140 /* Aspen-Mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Aspen-Mac.h"; sourceTree = "<group>"; };
+		D09852531BD979580037B140 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,27 +121,23 @@
 			name = "C Support";
 			sourceTree = "<group>";
 		};
-		D02EC4531BAA122600415629 /* Aspen Mac */ = {
+		D02EC4531BAA122600415629 /* Mac Specific */ = {
 			isa = PBXGroup;
 			children = (
+				D09852511BD978FF0037B140 /* Aspen-Mac.h */,
+				D09852531BD979580037B140 /* Info.plist */,
 			);
+			name = "Mac Specific";
 			path = "Aspen Mac";
-			sourceTree = "<group>";
-		};
-		D02EC45F1BAA122600415629 /* Aspen MacTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Aspen MacTests";
 			sourceTree = "<group>";
 		};
 		D04057FD1B72C86400494FCD = {
 			isa = PBXGroup;
 			children = (
 				D04058091B72C86400494FCD /* Aspen */,
-				D04058161B72C86400494FCD /* AspenTests */,
-				D02EC4531BAA122600415629 /* Aspen Mac */,
-				D02EC45F1BAA122600415629 /* Aspen MacTests */,
+				D040580A1B72C86400494FCD /* iOS Specific */,
+				D02EC4531BAA122600415629 /* Mac Specific */,
+				D04058161B72C86400494FCD /* Unit Tests */,
 				D04058081B72C86400494FCD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -149,21 +159,21 @@
 				D041E3761B73DBE5002D6FB7 /* Log Destinations */,
 				D041E3751B73DBD8002D6FB7 /* Protocols */,
 				6D6387B01BBD05F400CDE359 /* C Support */,
-				D040580A1B72C86400494FCD /* Supporting Files */,
 			);
 			path = Aspen;
 			sourceTree = "<group>";
 		};
-		D040580A1B72C86400494FCD /* Supporting Files */ = {
+		D040580A1B72C86400494FCD /* iOS Specific */ = {
 			isa = PBXGroup;
 			children = (
 				D040580C1B72C86400494FCD /* Aspen.h */,
 				D040580B1B72C86400494FCD /* Info.plist */,
 			);
-			name = "Supporting Files";
+			name = "iOS Specific";
+			path = Aspen;
 			sourceTree = "<group>";
 		};
-		D04058161B72C86400494FCD /* AspenTests */ = {
+		D04058161B72C86400494FCD /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
 				6D6387C01BBD8A1300CDE359 /* AspenTestCase.swift */,
@@ -172,6 +182,7 @@
 				6D6387B61BBD066200CDE359 /* AspenHelperTests.m */,
 				D04058171B72C86400494FCD /* Supporting Files */,
 			);
+			name = "Unit Tests";
 			path = AspenTests;
 			sourceTree = "<group>";
 		};
@@ -218,6 +229,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D098525B1BD979CF0037B140 /* AspenHelpers.h in Headers */,
+				D09852521BD978FF0037B140 /* Aspen-Mac.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +397,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09852571BD979C50037B140 /* ConsoleLogger.swift in Sources */,
+				D09852591BD979C90037B140 /* LogInterface.swift in Sources */,
+				D09852551BD979B80037B140 /* Aspen.swift in Sources */,
+				D098525D1BD979DC0037B140 /* LogFormatter.swift in Sources */,
+				D09852561BD979C10037B140 /* Logger.swift in Sources */,
+				D098525C1BD979DB0037B140 /* LogLevel.swift in Sources */,
+				D09852581BD979C50037B140 /* FileLogger.swift in Sources */,
+				D098525A1BD979CB0037B140 /* AspenHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,7 +413,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D6387B81BBD066200CDE359 /* AspenHelperTests.m in Sources */,
+				D09852601BD97A4C0037B140 /* AspenTests.swift in Sources */,
 				6D6387C21BBD8A1300CDE359 /* AspenTestCase.swift in Sources */,
+				D098525F1BD979F90037B140 /* LogLevelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
