@@ -31,7 +31,7 @@
 		D09852581BD979C50037B140 /* FileLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04058291B72DFB400494FCD /* FileLogger.swift */; };
 		D09852591BD979C90037B140 /* LogInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040582B1B72E44A00494FCD /* LogInterface.swift */; };
 		D098525A1BD979CB0037B140 /* AspenHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6387B21BBD064F00CDE359 /* AspenHelpers.swift */; };
-		D098525B1BD979CF0037B140 /* AspenHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D6387B11BBD064F00CDE359 /* AspenHelpers.h */; };
+		D098525B1BD979CF0037B140 /* AspenHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D6387B11BBD064F00CDE359 /* AspenHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D098525C1BD979DB0037B140 /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04058271B72D71700494FCD /* LogLevel.swift */; };
 		D098525D1BD979DC0037B140 /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D041E3731B73B918002D6FB7 /* LogFormatter.swift */; };
 		D098525F1BD979F90037B140 /* LogLevelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01DFAA11BBC445E00B4D1ED /* LogLevelTests.swift */; };
