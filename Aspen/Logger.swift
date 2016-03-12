@@ -34,13 +34,11 @@ public final class Logger: NSObject
 
 	private let queue = dispatch_queue_create("com.secondgear.AspenQueue", DISPATCH_QUEUE_SERIAL)
 
-	override init()
-	{
+	override init() {
 		fatalError("Please use init(name:, level:) to initialize a new Logger instance")
 	}
 
-	public init(name: String, level: DefaultLogLevel = .Info)
-	{
+	public init(name: String, level: DefaultLogLevel = .Info) {
 		self.name = name
 		self.level = LogLevel.getLevel(level)
 		self.formatter = LogFormatter()
@@ -48,33 +46,26 @@ public final class Logger: NSObject
 		super.init()
 	}
 
-	public func registerLogger(logger: LogInterface)
-	{
+	public func registerLogger(logger: LogInterface) {
 		activeLoggers.append(logger)
 	}
 
-	public func setLoggingLevel(level: DefaultLogLevel)
-	{
+	public func setLoggingLevel(level: DefaultLogLevel) {
 		self.level = LogLevel.getLevel(level)
 	}
 
-	func willLog(logLevel: DefaultLogLevel) -> Bool
-	{
+	func willLog(logLevel: DefaultLogLevel) -> Bool {
 		return logLevel.rawValue >= level.level.rawValue
 	}
 
-	func log(logLevel: DefaultLogLevel, @autoclosure message: () -> String)
-	{
-		if activeLoggers.count == 0
-		{
+	func log(logLevel: DefaultLogLevel, @autoclosure message: () -> String) {
+		if activeLoggers.count == 0 {
 			print("*** WARNING: log(\(logLevel.rawValue)) invoked with no loggers registered. If you're expecting file logging for forensic purposes, you're losing data. Message was '\(message())'")
 		}
 
-		if self.willLog(logLevel)
-		{
+		if self.willLog(logLevel) {
 			let constMessage = message()
-			for logger in activeLoggers
-			{
+			for logger in activeLoggers {
 				dispatch_async(queue) {
 					logger.log(constMessage)
 				}
@@ -82,32 +73,26 @@ public final class Logger: NSObject
 		}
 	}
 
-	func logFormatted(logLevel: DefaultLogLevel, @autoclosure message: () -> String)
-	{
+	func logFormatted(logLevel: DefaultLogLevel, @autoclosure message: () -> String) {
 		log(logLevel, message: formatter.formatLog(logLevel, message: message()))
 	}
 }
 
 /** Convenience / shorthand logging functions for predefined log levels. */
-extension Logger
-{
-	public func verbose(@autoclosure message: () -> String)
-	{
+extension Logger {
+	public func verbose(@autoclosure message: () -> String) {
 		logFormatted(.Verbose, message: message)
 	}
 
-	public func info(@autoclosure message: () -> String)
-	{
+	public func info(@autoclosure message: () -> String) {
 		logFormatted(.Info, message: message)
 	}
 
-	public func warn(@autoclosure message: () -> String)
-	{
+	public func warn(@autoclosure message: () -> String) {
 		logFormatted(.Warning, message: message)
 	}
 
-	public func error(@autoclosure message: () -> String)
-	{
+	public func error(@autoclosure message: () -> String) {
 		logFormatted(.Error, message: message)
 	}
 }

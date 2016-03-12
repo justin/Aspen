@@ -27,18 +27,15 @@ public final class Aspen: NSObject
 {
 	static var globalLogger = Logger(name: "Shared", level: .Info)
 
-	public class func registerLogger(logger: LogInterface)
-	{
+	public class func registerLogger(logger: LogInterface) {
 		globalLogger.registerLogger(logger)
 	}
 
-	public class func setLoggingLevel(level: DefaultLogLevel)
-	{
+	public class func setLoggingLevel(level: DefaultLogLevel) {
 		globalLogger.setLoggingLevel(level)
 	}
 
-	public class func getLogger(logName:String, level:DefaultLogLevel) -> Logger
-	{
+	public class func getLogger(logName:String, level:DefaultLogLevel) -> Logger {
 		let logger = Logger(name: logName, level: level)
 		logger.activeLoggers += globalLogger.activeLoggers
 		return logger

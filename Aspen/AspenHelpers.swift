@@ -26,8 +26,7 @@ import Foundation
 	Abstractions of the private Aspen global logger to facilitate late/lazy evaluation of
 	vararg log messages by the AspenHelpers C macros.
 */
-extension Aspen
-{
+extension Aspen {
 	@objc(willLog:)
 	public class func willLog(level: DefaultLogLevel) -> Bool { return self.globalLogger.willLog(level) }
 

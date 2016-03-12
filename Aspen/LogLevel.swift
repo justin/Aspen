@@ -23,8 +23,7 @@
 import Foundation
 
 @objc
-public enum DefaultLogLevel: Int
-{
+public enum DefaultLogLevel: Int {
     case Verbose = 200
     case Info = 300
     case Warning = 400
@@ -42,17 +41,16 @@ public final class LogLevel: NSObject {
     internal static let WARNING_LEVEL = LogLevel.create(.Warning, name: "Warning Level", label: "WARN")
     internal static let ERROR_LEVEL = LogLevel.create(.Error,  name: "Error Level", label: "ERROR")
     
-    public init(level: DefaultLogLevel, name: String, label: String)
-    {
+    public init(level: DefaultLogLevel, name: String, label: String) {
         self.level = level
         self.name = name
         self.label = label
+        
+        super.init()
     }
     
-    public static func getLevel(level:DefaultLogLevel) -> LogLevel
-    {
-        switch level
-        {
+    public static func getLevel(level:DefaultLogLevel) -> LogLevel {
+        switch level {
         case .Verbose:
             return VERBOSE_LEVEL
         case .Info:
@@ -64,10 +62,8 @@ public final class LogLevel: NSObject {
         }
     }
     
-    public func emojiIdentifier() -> String
-    {
-        switch level
-        {
+    public func emojiIdentifier() -> String {
+        switch level {
         case .Verbose:
             return "🚧"
         case .Info:
@@ -79,8 +75,7 @@ public final class LogLevel: NSObject {
         }
     }
     
-   private static func create(level: DefaultLogLevel, name: String, label: String) -> LogLevel
-    {
+   private static func create(level: DefaultLogLevel, name: String, label: String) -> LogLevel {
         return LogLevel(level:level, name: name, label: label)
     }
 }

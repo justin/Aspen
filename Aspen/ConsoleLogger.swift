@@ -29,8 +29,7 @@ public final class ConsoleLogger: NSObject, LogInterface {
         super.init()
     }
     
-    public func log(message: String)
-    {
+    public func log(message: String) {
         print(message)
     }
 }

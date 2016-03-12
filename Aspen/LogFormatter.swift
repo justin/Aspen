@@ -26,8 +26,7 @@ import Foundation
 public final class LogFormatter: NSObject {
     public var timeFormatter:NSDateFormatter
     
-    public override init()
-    {
+    public override init() {
         let locale = NSLocale(localeIdentifier: "en_US_POSIX")
         
         timeFormatter = NSDateFormatter()
@@ -37,8 +36,7 @@ public final class LogFormatter: NSObject {
         super.init()
     }
     
-    public func formatLog(level: DefaultLogLevel, message: String) -> String
-    {
+    public func formatLog(level: DefaultLogLevel, message: String) -> String {
         let logLevel = LogLevel.getLevel(level)
         let levelName = logLevel.label
         let emoji = logLevel.emojiIdentifier()

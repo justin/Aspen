@@ -28,8 +28,7 @@ public final class FileLogger: NSObject, LogInterface {
     
     private var fileHandle:NSFileHandle?
     
-    public override init()
-    {
+    public override init() {
         super.init()
         let locale = NSLocale(localeIdentifier: "en_US_POSIX")
         
@@ -42,65 +41,48 @@ public final class FileLogger: NSObject, LogInterface {
         let urls = fm.URLsForDirectory(.LibraryDirectory, inDomains: .UserDomainMask)
         guard let url = urls.last else { return }
         
-        if let p = url.path
-        {
+        if let p = url.path {
             let path = NSURL.fileURLWithPath("\(p)/Logs/\(dateString).log")
             fileURL = path
             openFile()
         }
     }
     
-    deinit
-    {
+    deinit {
         closeFile()
     }
 
-    public func log(message: String)
-    {
-        if let handle = fileHandle
-        {
+    public func log(message: String) {
+        if let handle = fileHandle {
             handle.seekToEndOfFile()
             let messageWithNewLine = "\(message)\n"
-            if let data = messageWithNewLine.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
-            {
+            if let data = messageWithNewLine.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
                 handle.writeData(data)
             }
         }
     }
     
-    private func openFile()
-    {
+    private func openFile() {
         let fm = NSFileManager.defaultManager()
-        if let URL = fileURL, filePath = URL.path
-        {
-            if fm.fileExistsAtPath(filePath) == false
-            {
-                do
-                {
+        if let URL = fileURL, filePath = URL.path {
+            if fm.fileExistsAtPath(filePath) == false {
+                do {
                     try fm.createDirectoryAtURL(URL.URLByDeletingLastPathComponent!, withIntermediateDirectories: true, attributes: nil)
-                }
-                catch _
-                {
-                }
+                } catch _ { }
                 fm.createFileAtPath(filePath, contents: nil, attributes: nil)
             }
             
-            do
-            {
+            do {
                 fileHandle = try NSFileHandle(forWritingToURL: URL)
-            }
-            catch let error as NSError
-            {
+            } catch {
                 print("Error opening log file \(error)")
                 fileHandle = nil
             }
         }
     }
     
-    private func closeFile()
-    {
-        if let handle = fileHandle
-        {
+    private func closeFile() {
+        if let handle = fileHandle {
             handle.closeFile()
         }
         fileHandle = nil
