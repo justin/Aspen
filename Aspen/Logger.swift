@@ -22,14 +22,13 @@
 
 import Foundation
 
-public final class Logger: NSObject
-{
+public final class Logger: NSObject {
 	public var level: LogLevel
 	public var formatter: LogFormatter
 
 	internal var name: String
 
-	internal var activeLoggers: [LogInterface] = [LogInterface]()
+	internal var activeLoggers = Array<LogInterface>()
 
 	private let queue = dispatch_queue_create("com.secondgear.AspenQueue", DISPATCH_QUEUE_SERIAL)
 
@@ -58,17 +57,20 @@ public final class Logger: NSObject
 	}
 
 	func log(logLevel: DefaultLogLevel, @autoclosure message: () -> String) {
-		if activeLoggers.count == 0 {
+        // Don't bother trying to log something with no loggers registered.
+		guard activeLoggers.count > 0 else {
 			print("*** WARNING: log(\(logLevel.rawValue)) invoked with no loggers registered. If you're expecting file logging for forensic purposes, you're losing data. Message was '\(message())'")
+            return
 		}
 
 		if self.willLog(logLevel) {
 			let constMessage = message()
-			for logger in activeLoggers {
-				dispatch_async(queue) {
-					logger.log(constMessage)
-				}
-			}
+            
+            activeLoggers.forEach { logger in
+                dispatch_async(queue) {
+                    logger.log(constMessage)
+                }
+            }
 		}
 	}
 
