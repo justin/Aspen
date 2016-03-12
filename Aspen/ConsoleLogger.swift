@@ -22,7 +22,6 @@
 
 import Foundation
 
-@objc
 public final class ConsoleLogger: NSObject, LogInterface {
     public override init()
     {

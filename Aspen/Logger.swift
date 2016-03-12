@@ -22,7 +22,6 @@
 
 import Foundation
 
-@objc
 public final class Logger: NSObject
 {
 	public var level: LogLevel
