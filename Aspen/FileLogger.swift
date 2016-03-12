@@ -23,8 +23,7 @@
 import Foundation
 
 @objc
-public class FileLogger: NSObject, LogInterface
-{
+public final class FileLogger: NSObject, LogInterface {
     public var fileURL:NSURL?
     
     private var fileHandle:NSFileHandle?

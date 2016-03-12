@@ -23,8 +23,7 @@
 import Foundation
 
 @objc
-public class LogFormatter: NSObject
-{
+public final class LogFormatter: NSObject {
     public var timeFormatter:NSDateFormatter
     
     public override init()

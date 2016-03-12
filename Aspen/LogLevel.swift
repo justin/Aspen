@@ -32,8 +32,7 @@ public enum DefaultLogLevel: Int
 }
 
 @objc
-public class LogLevel: NSObject
-{
+public final class LogLevel: NSObject {
     public var level: DefaultLogLevel
     public var name: String
     public var label: String
