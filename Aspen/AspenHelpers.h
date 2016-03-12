@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define AspenWarn(format, ...) AspenMaybe(DefaultLogLevelWarning, format, ##__VA_ARGS__)
 #define AspenError(format, ...) AspenMaybe(DefaultLogLevelError, format, ##__VA_ARGS__)
 
-// Do not use AspenMaybe directly; use one of the other macros below
+// Do not use AspenMaybe directly; use one of the other macros above
 #define AspenMaybe(level, format, ...) do { if ([Aspen willLog:level]) { [Aspen logWithLevel:level message:[NSString stringWithFormat:format, ##__VA_ARGS__]]; } } while (0)
 
 NS_ASSUME_NONNULL_END
