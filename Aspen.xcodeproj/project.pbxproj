@@ -143,13 +143,13 @@
 			name = "C Support";
 			sourceTree = "<group>";
 		};
-		D02EC4531BAA122600415629 /* Mac Specific */ = {
+		D02EC4531BAA122600415629 /* macOS Specific */ = {
 			isa = PBXGroup;
 			children = (
 				D09852511BD978FF0037B140 /* Aspen-Mac.h */,
 				D09852531BD979580037B140 /* Info.plist */,
 			);
-			name = "Mac Specific";
+			name = "macOS Specific";
 			path = "Aspen Mac";
 			sourceTree = "<group>";
 		};
@@ -158,9 +158,9 @@
 			children = (
 				D04058091B72C86400494FCD /* Aspen */,
 				D040580A1B72C86400494FCD /* iOS Specific */,
-				D02EC4531BAA122600415629 /* Mac Specific */,
-				D0A36B641C94775600298A7B /* Aspen watchOS */,
-				D0A36B711C94776A00298A7B /* Aspen tvOS */,
+				D02EC4531BAA122600415629 /* macOS Specific */,
+				D0A36B641C94775600298A7B /* watchOS Specific */,
+				D0A36B711C94776A00298A7B /* tvOS Specific */,
 				D04058161B72C86400494FCD /* Unit Tests */,
 				D04058081B72C86400494FCD /* Products */,
 			);
@@ -248,21 +248,23 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		D0A36B641C94775600298A7B /* Aspen watchOS */ = {
+		D0A36B641C94775600298A7B /* watchOS Specific */ = {
 			isa = PBXGroup;
 			children = (
 				D0A36B651C94775600298A7B /* Aspen-watchOS.h */,
 				D0A36B671C94775600298A7B /* Info.plist */,
 			);
+			name = "watchOS Specific";
 			path = "Aspen watchOS";
 			sourceTree = "<group>";
 		};
-		D0A36B711C94776A00298A7B /* Aspen tvOS */ = {
+		D0A36B711C94776A00298A7B /* tvOS Specific */ = {
 			isa = PBXGroup;
 			children = (
 				D0A36B721C94776A00298A7B /* Aspen-tvOS.h */,
 				D0A36B741C94776A00298A7B /* Info.plist */,
 			);
+			name = "tvOS Specific";
 			path = "Aspen tvOS";
 			sourceTree = "<group>";
 		};
