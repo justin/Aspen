@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D04058061B72C86400494FCD"
-               BuildableName = "Aspen.framework"
-               BlueprintName = "Aspen iOS"
-               ReferencedContainer = "container:Aspen.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D04058111B72C86400494FCD"
-               BuildableName = "Aspen Tests.xctest"
-               BlueprintName = "Aspen Tests"
+               BlueprintIdentifier = "D02EC4511BAA122600415629"
+               BuildableName = "Aspen macOS"
+               BlueprintName = "Aspen macOS"
                ReferencedContainer = "container:Aspen.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D04058111B72C86400494FCD"
-               BuildableName = "Aspen Tests.xctest"
-               BlueprintName = "Aspen Tests"
+               BlueprintIdentifier = "D02EC45A1BAA122600415629"
+               BuildableName = "Aspen MacTests"
+               BlueprintName = "Aspen MacTests"
                ReferencedContainer = "container:Aspen.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D04058061B72C86400494FCD"
-            BuildableName = "Aspen.framework"
-            BlueprintName = "Aspen iOS"
+            BlueprintIdentifier = "D02EC4511BAA122600415629"
+            BuildableName = "Aspen macOS"
+            BlueprintName = "Aspen macOS"
             ReferencedContainer = "container:Aspen.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -78,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D04058061B72C86400494FCD"
-            BuildableName = "Aspen.framework"
-            BlueprintName = "Aspen iOS"
+            BlueprintIdentifier = "D02EC4511BAA122600415629"
+            BuildableName = "Aspen macOS"
+            BlueprintName = "Aspen macOS"
             ReferencedContainer = "container:Aspen.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -96,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D04058061B72C86400494FCD"
-            BuildableName = "Aspen.framework"
-            BlueprintName = "Aspen iOS"
+            BlueprintIdentifier = "D02EC4511BAA122600415629"
+            BuildableName = "Aspen macOS"
+            BlueprintName = "Aspen macOS"
             ReferencedContainer = "container:Aspen.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

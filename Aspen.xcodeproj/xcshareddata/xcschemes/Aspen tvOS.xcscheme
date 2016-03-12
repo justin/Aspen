@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0720"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D04058061B72C86400494FCD"
-               BuildableName = "Aspen.framework"
-               BlueprintName = "Aspen iOS"
-               ReferencedContainer = "container:Aspen.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D04058111B72C86400494FCD"
-               BuildableName = "Aspen Tests.xctest"
-               BlueprintName = "Aspen Tests"
+               BlueprintIdentifier = "D0A36B6F1C94776A00298A7B"
+               BuildableName = "Aspen tvOS.framework"
+               BlueprintName = "Aspen tvOS"
                ReferencedContainer = "container:Aspen.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D04058111B72C86400494FCD"
-               BuildableName = "Aspen Tests.xctest"
-               BlueprintName = "Aspen Tests"
-               ReferencedContainer = "container:Aspen.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D04058061B72C86400494FCD"
-            BuildableName = "Aspen.framework"
-            BlueprintName = "Aspen iOS"
-            ReferencedContainer = "container:Aspen.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -78,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D04058061B72C86400494FCD"
-            BuildableName = "Aspen.framework"
-            BlueprintName = "Aspen iOS"
+            BlueprintIdentifier = "D0A36B6F1C94776A00298A7B"
+            BuildableName = "Aspen tvOS.framework"
+            BlueprintName = "Aspen tvOS"
             ReferencedContainer = "container:Aspen.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -96,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D04058061B72C86400494FCD"
-            BuildableName = "Aspen.framework"
-            BlueprintName = "Aspen iOS"
+            BlueprintIdentifier = "D0A36B6F1C94776A00298A7B"
+            BuildableName = "Aspen tvOS.framework"
+            BlueprintName = "Aspen tvOS"
             ReferencedContainer = "container:Aspen.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
