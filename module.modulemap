@@ -1,5 +1,7 @@
 framework module Aspen {
     umbrella header "Aspen.h"
-    
+
+    textual header "AspenHelpers.h"
+
     export *
 }

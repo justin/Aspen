@@ -135,7 +135,6 @@
 		6D6387B01BBD05F400CDE359 /* C Support */ = {
 			isa = PBXGroup;
 			children = (
-				D0AB31DD1C9DC61A004D92E7 /* module.modulemap */,
 				6D6387B21BBD064F00CDE359 /* AspenHelpers.swift */,
 				6D6387B11BBD064F00CDE359 /* AspenHelpers.h */,
 			);
@@ -179,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				D040580C1B72C86400494FCD /* Aspen.h */,
+				D0AB31DD1C9DC61A004D92E7 /* module.modulemap */,
 				D04058231B72C8A500494FCD /* Aspen.swift */,
 				D041E3771B73DBF9002D6FB7 /* Core */,
 				D041E3761B73DBE5002D6FB7 /* Log Destinations */,
