@@ -22,7 +22,6 @@
 		D040582C1B72E44A00494FCD /* LogInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040582B1B72E44A00494FCD /* LogInterface.swift */; };
 		D040582E1B72E76500494FCD /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040582D1B72E76500494FCD /* Logger.swift */; };
 		D041E3741B73B918002D6FB7 /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D041E3731B73B918002D6FB7 /* LogFormatter.swift */; };
-		D09852521BD978FF0037B140 /* Aspen-Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = D09852511BD978FF0037B140 /* Aspen-Mac.h */; };
 		D09852551BD979B80037B140 /* Aspen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04058231B72C8A500494FCD /* Aspen.swift */; };
 		D09852561BD979C10037B140 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040582D1B72E76500494FCD /* Logger.swift */; };
 		D09852571BD979C50037B140 /* ConsoleLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04058251B72D6CB00494FCD /* ConsoleLogger.swift */; };
@@ -32,8 +31,6 @@
 		D098525B1BD979CF0037B140 /* AspenHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D6387B11BBD064F00CDE359 /* AspenHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D098525C1BD979DB0037B140 /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04058271B72D71700494FCD /* LogLevel.swift */; };
 		D098525D1BD979DC0037B140 /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D041E3731B73B918002D6FB7 /* LogFormatter.swift */; };
-		D0A36B661C94775600298A7B /* Aspen-watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A36B651C94775600298A7B /* Aspen-watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0A36B731C94776A00298A7B /* Aspen-tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A36B721C94776A00298A7B /* Aspen-tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0A36B781C94778400298A7B /* Aspen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04058231B72C8A500494FCD /* Aspen.swift */; };
 		D0A36B791C94778400298A7B /* Aspen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04058231B72C8A500494FCD /* Aspen.swift */; };
 		D0A36B7A1C94778C00298A7B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040582D1B72E76500494FCD /* Logger.swift */; };
@@ -52,6 +49,9 @@
 		D0A36B871C94778D00298A7B /* AspenHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6387B21BBD064F00CDE359 /* AspenHelpers.swift */; };
 		D0A36B881C94779100298A7B /* AspenHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D6387B11BBD064F00CDE359 /* AspenHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0A36B891C94779100298A7B /* AspenHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D6387B11BBD064F00CDE359 /* AspenHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0AB31D91C9DC4D9004D92E7 /* Aspen.h in Headers */ = {isa = PBXBuildFile; fileRef = D040580C1B72C86400494FCD /* Aspen.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0AB31DA1C9DC4D9004D92E7 /* Aspen.h in Headers */ = {isa = PBXBuildFile; fileRef = D040580C1B72C86400494FCD /* Aspen.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0AB31DB1C9DC4D9004D92E7 /* Aspen.h in Headers */ = {isa = PBXBuildFile; fileRef = D040580C1B72C86400494FCD /* Aspen.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,14 +84,12 @@
 		D040582B1B72E44A00494FCD /* LogInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInterface.swift; sourceTree = "<group>"; };
 		D040582D1B72E76500494FCD /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		D041E3731B73B918002D6FB7 /* LogFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFormatter.swift; sourceTree = "<group>"; };
-		D09852511BD978FF0037B140 /* Aspen-Mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Aspen-Mac.h"; sourceTree = "<group>"; };
 		D09852531BD979580037B140 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0A36B631C94775600298A7B /* Aspen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Aspen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0A36B651C94775600298A7B /* Aspen-watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aspen-watchOS.h"; sourceTree = "<group>"; };
 		D0A36B671C94775600298A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0A36B701C94776A00298A7B /* Aspen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Aspen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0A36B721C94776A00298A7B /* Aspen-tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aspen-tvOS.h"; sourceTree = "<group>"; };
 		D0A36B741C94776A00298A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0AB31DD1C9DC61A004D92E7 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +135,7 @@
 		6D6387B01BBD05F400CDE359 /* C Support */ = {
 			isa = PBXGroup;
 			children = (
+				D0AB31DD1C9DC61A004D92E7 /* module.modulemap */,
 				6D6387B21BBD064F00CDE359 /* AspenHelpers.swift */,
 				6D6387B11BBD064F00CDE359 /* AspenHelpers.h */,
 			);
@@ -146,7 +145,6 @@
 		D02EC4531BAA122600415629 /* macOS Specific */ = {
 			isa = PBXGroup;
 			children = (
-				D09852511BD978FF0037B140 /* Aspen-Mac.h */,
 				D09852531BD979580037B140 /* Info.plist */,
 			);
 			name = "macOS Specific";
@@ -180,6 +178,7 @@
 		D04058091B72C86400494FCD /* Aspen */ = {
 			isa = PBXGroup;
 			children = (
+				D040580C1B72C86400494FCD /* Aspen.h */,
 				D04058231B72C8A500494FCD /* Aspen.swift */,
 				D041E3771B73DBF9002D6FB7 /* Core */,
 				D041E3761B73DBE5002D6FB7 /* Log Destinations */,
@@ -192,7 +191,6 @@
 		D040580A1B72C86400494FCD /* iOS Specific */ = {
 			isa = PBXGroup;
 			children = (
-				D040580C1B72C86400494FCD /* Aspen.h */,
 				D040580B1B72C86400494FCD /* Info.plist */,
 			);
 			name = "iOS Specific";
@@ -251,7 +249,6 @@
 		D0A36B641C94775600298A7B /* watchOS Specific */ = {
 			isa = PBXGroup;
 			children = (
-				D0A36B651C94775600298A7B /* Aspen-watchOS.h */,
 				D0A36B671C94775600298A7B /* Info.plist */,
 			);
 			name = "watchOS Specific";
@@ -261,7 +258,6 @@
 		D0A36B711C94776A00298A7B /* tvOS Specific */ = {
 			isa = PBXGroup;
 			children = (
-				D0A36B721C94776A00298A7B /* Aspen-tvOS.h */,
 				D0A36B741C94776A00298A7B /* Info.plist */,
 			);
 			name = "tvOS Specific";
@@ -275,8 +271,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0AB31D91C9DC4D9004D92E7 /* Aspen.h in Headers */,
 				D098525B1BD979CF0037B140 /* AspenHelpers.h in Headers */,
-				D09852521BD978FF0037B140 /* Aspen-Mac.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,8 +289,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0AB31DA1C9DC4D9004D92E7 /* Aspen.h in Headers */,
 				D0A36B881C94779100298A7B /* AspenHelpers.h in Headers */,
-				D0A36B661C94775600298A7B /* Aspen-watchOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,8 +298,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0AB31DB1C9DC4D9004D92E7 /* Aspen.h in Headers */,
 				D0A36B891C94779100298A7B /* AspenHelpers.h in Headers */,
-				D0A36B731C94776A00298A7B /* Aspen-tvOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +579,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "$(SRCROOT)/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.secondgear.Aspen-Mac";
 				PRODUCT_NAME = Aspen;
 				SDKROOT = macosx;
@@ -603,6 +600,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "$(SRCROOT)/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.secondgear.Aspen-Mac";
 				PRODUCT_NAME = Aspen;
 				SDKROOT = macosx;
@@ -712,6 +710,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "$(SRCROOT)/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.secondgear.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Aspen;
 				SKIP_INSTALL = YES;
@@ -731,6 +730,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "$(SRCROOT)/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.secondgear.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Aspen;
 				SKIP_INSTALL = YES;
@@ -778,6 +778,7 @@
 				INFOPLIST_FILE = "Aspen watchOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "$(SRCROOT)/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.secondgear.Aspen.Aspen-watchOS";
 				PRODUCT_NAME = Aspen;
 				SDKROOT = watchos;
@@ -798,6 +799,7 @@
 				INFOPLIST_FILE = "Aspen watchOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "$(SRCROOT)/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.secondgear.Aspen.Aspen-watchOS";
 				PRODUCT_NAME = Aspen;
 				SDKROOT = watchos;
@@ -818,6 +820,7 @@
 				INFOPLIST_FILE = "Aspen tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "$(SRCROOT)/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.secondgear.Aspen.Aspen-tvOS";
 				PRODUCT_NAME = Aspen;
 				SDKROOT = appletvos;
@@ -837,6 +840,7 @@
 				INFOPLIST_FILE = "Aspen tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "$(SRCROOT)/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.secondgear.Aspen.Aspen-tvOS";
 				PRODUCT_NAME = Aspen;
 				SDKROOT = appletvos;
@@ -892,6 +896,7 @@
 				D0A36B691C94775600298A7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0A36B751C94776A00298A7B /* Build configuration list for PBXNativeTarget "Aspen tvOS" */ = {
 			isa = XCConfigurationList;
@@ -900,6 +905,7 @@
 				D0A36B771C94776A00298A7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

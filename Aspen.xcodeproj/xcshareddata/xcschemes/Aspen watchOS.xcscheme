@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0A36B621C94775600298A7B"
-               BuildableName = "Aspen watchOS.framework"
+               BuildableName = "Aspen.framework"
                BlueprintName = "Aspen watchOS"
                ReferencedContainer = "container:Aspen.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0A36B621C94775600298A7B"
-            BuildableName = "Aspen watchOS.framework"
+            BuildableName = "Aspen.framework"
             BlueprintName = "Aspen watchOS"
             ReferencedContainer = "container:Aspen.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0A36B621C94775600298A7B"
-            BuildableName = "Aspen watchOS.framework"
+            BuildableName = "Aspen.framework"
             BlueprintName = "Aspen watchOS"
             ReferencedContainer = "container:Aspen.xcodeproj">
          </BuildableReference>

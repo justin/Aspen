@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0A36B6F1C94776A00298A7B"
-               BuildableName = "Aspen tvOS.framework"
+               BuildableName = "Aspen.framework"
                BlueprintName = "Aspen tvOS"
                ReferencedContainer = "container:Aspen.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0A36B6F1C94776A00298A7B"
-            BuildableName = "Aspen tvOS.framework"
+            BuildableName = "Aspen.framework"
             BlueprintName = "Aspen tvOS"
             ReferencedContainer = "container:Aspen.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0A36B6F1C94776A00298A7B"
-            BuildableName = "Aspen tvOS.framework"
+            BuildableName = "Aspen.framework"
             BlueprintName = "Aspen tvOS"
             ReferencedContainer = "container:Aspen.xcodeproj">
          </BuildableReference>
