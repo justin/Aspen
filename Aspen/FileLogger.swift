@@ -56,7 +56,12 @@ public final class FileLogger: NSObject, LogInterface {
             handle.seekToEndOfFile()
             let messageWithNewLine = "\(message)\n"
             if let data = messageWithNewLine.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
-                handle.writeData(data)
+                let exception = tryBlock {
+                    handle.writeData(data)
+                }
+                if exception != nil {
+                    print("Error writing to log file \(exception)")
+                }
             }
         }
     }
