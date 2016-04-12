@@ -32,4 +32,14 @@ NS_ASSUME_NONNULL_BEGIN
 // Do not use AspenMaybe directly; use one of the other macros above
 #define AspenMaybe(level, format, ...) do { if ([Aspen willLog:level]) { [Aspen logWithLevel:level message:[NSString stringWithFormat:format, ##__VA_ARGS__]]; } } while (0)
 
+NS_INLINE NSException * _Nullable tryBlock(void(^_Nonnull tryBlock)(void)) {
+    @try {
+        tryBlock();
+    }
+    @catch (NSException *exception) {
+        return exception;
+    }
+    return nil;
+}
+
 NS_ASSUME_NONNULL_END
