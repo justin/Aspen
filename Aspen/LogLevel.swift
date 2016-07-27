@@ -24,10 +24,10 @@ import Foundation
 
 @objc
 public enum DefaultLogLevel: Int {
-    case Verbose = 200
-    case Info = 300
-    case Warning = 400
-    case Error = 500
+    case verbose = 200
+    case info = 300
+    case warning = 400
+    case error = 500
 }
 
 public final class LogLevel: NSObject {
@@ -35,10 +35,10 @@ public final class LogLevel: NSObject {
     public var name: String
     public var label: String
     
-    internal static let VERBOSE_LEVEL = LogLevel.create(.Verbose, name: "Verbose Level", label: "VERBOSE")
-    internal static let INFO_LEVEL = LogLevel.create(.Info, name: "Info Level", label: "INFO")
-    internal static let WARNING_LEVEL = LogLevel.create(.Warning, name: "Warning Level", label: "WARN")
-    internal static let ERROR_LEVEL = LogLevel.create(.Error,  name: "Error Level", label: "ERROR")
+    internal static let VERBOSE_LEVEL = LogLevel.create(.verbose, name: "Verbose Level", label: "VERBOSE")
+    internal static let INFO_LEVEL = LogLevel.create(.info, name: "Info Level", label: "INFO")
+    internal static let WARNING_LEVEL = LogLevel.create(.warning, name: "Warning Level", label: "WARN")
+    internal static let ERROR_LEVEL = LogLevel.create(.error,  name: "Error Level", label: "ERROR")
     
     public init(level: DefaultLogLevel, name: String, label: String) {
         self.level = level
@@ -48,33 +48,33 @@ public final class LogLevel: NSObject {
         super.init()
     }
     
-    public static func getLevel(level:DefaultLogLevel) -> LogLevel {
+    public static func getLevel(_ level:DefaultLogLevel) -> LogLevel {
         switch level {
-        case .Verbose:
+        case .verbose:
             return VERBOSE_LEVEL
-        case .Info:
+        case .info:
             return INFO_LEVEL
-        case .Warning:
+        case .warning:
             return WARNING_LEVEL
-        case .Error:
+        case .error:
             return ERROR_LEVEL
         }
     }
     
     public func emojiIdentifier() -> String {
         switch level {
-        case .Verbose:
+        case .verbose:
             return "🚧"
-        case .Info:
+        case .info:
             return "☝️"
-        case .Warning:
+        case .warning:
             return "⚠️"
-        case .Error:
+        case .error:
             return "🚨"
         }
     }
     
-   private static func create(level: DefaultLogLevel, name: String, label: String) -> LogLevel {
+   private static func create(_ level: DefaultLogLevel, name: String, label: String) -> LogLevel {
         return LogLevel(level:level, name: name, label: label)
     }
 }

@@ -24,5 +24,5 @@ import Foundation
 
 @objc
 public protocol LogInterface {
-    func log(message: String)
+    func log(_ message: String)
 }

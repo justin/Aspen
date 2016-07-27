@@ -24,24 +24,24 @@ import Foundation
 
 public final class Aspen: NSObject
 {
-	static var globalLogger = Logger(name: "Shared", level: .Info)
+	static var globalLogger = Logger(name: "Shared", level: .info)
 
-	public class func registerLogger(logger: LogInterface) {
+	public class func registerLogger(_ logger: LogInterface) {
 		globalLogger.registerLogger(logger)
 	}
 
-	public class func setLoggingLevel(level: DefaultLogLevel) {
+	public class func setLoggingLevel(_ level: DefaultLogLevel) {
 		globalLogger.setLoggingLevel(level)
 	}
 
-	public class func getLogger(logName:String, level:DefaultLogLevel) -> Logger {
+	public class func getLogger(_ logName:String, level:DefaultLogLevel) -> Logger {
 		let logger = Logger(name: logName, level: level)
 		logger.activeLoggers += globalLogger.activeLoggers
 		return logger
 	}
 }
 
-public func aspenVerbose(@autoclosure message: () -> String) { Aspen.globalLogger.verbose(message) }
-public func aspenInfo(@autoclosure message: () -> String) { Aspen.globalLogger.info(message) }
-public func aspenWarn(@autoclosure message: () -> String) { Aspen.globalLogger.warn(message) }
-public func aspenError(@autoclosure message: () -> String) { Aspen.globalLogger.error(message) }
+public func aspenVerbose( _ message: @autoclosure () -> String) { Aspen.globalLogger.verbose(message) }
+public func aspenInfo( _ message: @autoclosure () -> String) { Aspen.globalLogger.info(message) }
+public func aspenWarn( _ message: @autoclosure () -> String) { Aspen.globalLogger.warn(message) }
+public func aspenError( _ message: @autoclosure () -> String) { Aspen.globalLogger.error(message) }

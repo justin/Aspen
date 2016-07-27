@@ -23,24 +23,24 @@
 import Foundation
 
 public final class LogFormatter: NSObject {
-    public var timeFormatter:NSDateFormatter
+    public var timeFormatter:DateFormatter
     
     public override init() {
-        let locale = NSLocale(localeIdentifier: "en_US_POSIX")
+        let locale = Locale(localeIdentifier: "en_US_POSIX")
         
-        timeFormatter = NSDateFormatter()
+        timeFormatter = DateFormatter()
         timeFormatter.locale = locale
         timeFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
         
         super.init()
     }
     
-    public func formatLog(level: DefaultLogLevel, message: String) -> String {
+    public func formatLog(_ level: DefaultLogLevel, message: String) -> String {
         let logLevel = LogLevel.getLevel(level)
         let levelName = logLevel.label
         let emoji = logLevel.emojiIdentifier()
-        let now = NSDate()
-        let timeString = timeFormatter.stringFromDate(now)
+        let now = Date()
+        let timeString = timeFormatter.string(from: now)
         
         return "\(timeString) — [\(emoji)\(levelName)\(emoji)] \(message)"
     }
