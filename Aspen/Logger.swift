@@ -30,7 +30,7 @@ public final class Logger: NSObject {
 
 	internal var activeLoggers = Array<LogInterface>()
 
-	private let queue = DispatchQueue(label: "com.secondgear.AspenQueue", attributes: DispatchQueueAttributes.serial)
+	private let queue = DispatchQueue(label: "com.secondgear.AspenQueue", attributes: [])
 
 	override init() {
 		fatalError("Please use init(name:, level:) to initialize a new Logger instance")

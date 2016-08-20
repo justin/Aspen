@@ -29,7 +29,7 @@ public final class FileLogger: NSObject, LogInterface {
     
     public override init() {
         super.init()
-        let locale = Locale(localeIdentifier: "en_US_POSIX")
+        let locale = Locale(identifier: "en_US_POSIX")
         
         let timeFormatter = DateFormatter()
         timeFormatter.locale = locale
@@ -37,14 +37,13 @@ public final class FileLogger: NSObject, LogInterface {
         let dateString = timeFormatter.string(from: Date())
         
         let fm = FileManager.default
-        let urls = fm.urlsForDirectory(.libraryDirectory, inDomains: .userDomainMask)
+        
+        let urls = fm.urls(for: .libraryDirectory, in: .userDomainMask)
         guard let url = urls.last else { return }
         
-        if let p = url.path {
-            let path = URL.init(fileURLWithPath: "\(p)/Logs/\(dateString).log")
-            fileURL = path
-            openFile()
-        }
+        let path = URL.init(fileURLWithPath: "\(url.path)/Logs/\(dateString).log")
+        fileURL = path
+        openFile()
     }
     
     deinit {
@@ -68,10 +67,11 @@ public final class FileLogger: NSObject, LogInterface {
     
     private func openFile() {
         let fm = FileManager.default
-        if let URL = fileURL, filePath = URL.path {
+        if let URL = fileURL {
+            let filePath = URL.path
             if fm.fileExists(atPath: filePath) == false {
                 do {
-                    try fm.createDirectory(at: try! URL.deletingLastPathComponent(), withIntermediateDirectories: true, attributes: nil)
+                    try fm.createDirectory(at: URL.deletingLastPathComponent(), withIntermediateDirectories: true, attributes: nil)
                 } catch _ { }
                 fm.createFile(atPath: filePath, contents: nil, attributes: nil)
             }
@@ -91,5 +91,4 @@ public final class FileLogger: NSObject, LogInterface {
         }
         fileHandle = nil
     }
-
 }

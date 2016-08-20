@@ -26,7 +26,7 @@ public final class LogFormatter: NSObject {
     public var timeFormatter:DateFormatter
     
     public override init() {
-        let locale = Locale(localeIdentifier: "en_US_POSIX")
+        let locale = Locale(identifier: "en_US_POSIX")
         
         timeFormatter = DateFormatter()
         timeFormatter.locale = locale
