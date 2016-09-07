@@ -30,13 +30,13 @@ public final class Logger: NSObject {
 
 	internal var activeLoggers = Array<LogInterface>()
 
-	private let queue = dispatch_queue_create("com.secondgear.AspenQueue", DISPATCH_QUEUE_SERIAL)
+	private let queue = DispatchQueue(label: "com.secondgear.AspenQueue", attributes: [])
 
 	override init() {
 		fatalError("Please use init(name:, level:) to initialize a new Logger instance")
 	}
 
-	public init(name: String, level: DefaultLogLevel = .Info) {
+	public init(name: String, level: DefaultLogLevel = .info) {
 		self.name = name
 		self.level = LogLevel.getLevel(level)
 		self.formatter = LogFormatter()
@@ -44,19 +44,19 @@ public final class Logger: NSObject {
 		super.init()
 	}
 
-	public func registerLogger(logger: LogInterface) {
+	public func registerLogger(_ logger: LogInterface) {
 		activeLoggers.append(logger)
 	}
 
-	public func setLoggingLevel(level: DefaultLogLevel) {
+	public func setLoggingLevel(_ level: DefaultLogLevel) {
 		self.level = LogLevel.getLevel(level)
 	}
 
-	func willLog(logLevel: DefaultLogLevel) -> Bool {
+	func willLog(_ logLevel: DefaultLogLevel) -> Bool {
 		return logLevel.rawValue >= level.level.rawValue
 	}
 
-	func log(logLevel: DefaultLogLevel, @autoclosure message: () -> String) {
+	func log(_ logLevel: DefaultLogLevel, message: @autoclosure () -> String) {
         // Don't bother trying to log something with no loggers registered.
 		guard activeLoggers.count > 0 else {
 			print("*** WARNING: log(\(logLevel.rawValue)) invoked with no loggers registered. If you're expecting file logging for forensic purposes, you're losing data. Message was '\(message())'")
@@ -67,33 +67,33 @@ public final class Logger: NSObject {
 			let constMessage = message()
             
             activeLoggers.forEach { logger in
-                dispatch_async(queue) {
+                queue.async {
                     logger.log(constMessage)
                 }
             }
 		}
 	}
 
-	func logFormatted(logLevel: DefaultLogLevel, @autoclosure message: () -> String) {
+	func logFormatted(_ logLevel: DefaultLogLevel, message: @autoclosure () -> String) {
 		log(logLevel, message: formatter.formatLog(logLevel, message: message()))
 	}
 }
 
 /** Convenience / shorthand logging functions for predefined log levels. */
 extension Logger {
-	public func verbose(@autoclosure message: () -> String) {
-		logFormatted(.Verbose, message: message)
+	public func verbose( _ message: @autoclosure () -> String) {
+		logFormatted(.verbose, message: message)
 	}
 
-	public func info(@autoclosure message: () -> String) {
-		logFormatted(.Info, message: message)
+	public func info( _ message: @autoclosure () -> String) {
+		logFormatted(.info, message: message)
 	}
 
-	public func warn(@autoclosure message: () -> String) {
-		logFormatted(.Warning, message: message)
+	public func warn( _ message: @autoclosure () -> String) {
+		logFormatted(.warning, message: message)
 	}
 
-	public func error(@autoclosure message: () -> String) {
-		logFormatted(.Error, message: message)
+	public func error( _ message: @autoclosure () -> String) {
+		logFormatted(.error, message: message)
 	}
 }

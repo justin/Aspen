@@ -23,41 +23,40 @@
 import Foundation
 
 public final class FileLogger: NSObject, LogInterface {
-    public var fileURL:NSURL?
+    public var fileURL:URL?
     
-    private var fileHandle:NSFileHandle?
+    private var fileHandle:FileHandle?
     
     public override init() {
         super.init()
-        let locale = NSLocale(localeIdentifier: "en_US_POSIX")
+        let locale = Locale(identifier: "en_US_POSIX")
         
-        let timeFormatter = NSDateFormatter()
+        let timeFormatter = DateFormatter()
         timeFormatter.locale = locale
         timeFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
-        let dateString = timeFormatter.stringFromDate(NSDate())
+        let dateString = timeFormatter.string(from: Date())
         
-        let fm = NSFileManager.defaultManager()
-        let urls = fm.URLsForDirectory(.LibraryDirectory, inDomains: .UserDomainMask)
+        let fm = FileManager.default
+        
+        let urls = fm.urls(for: .libraryDirectory, in: .userDomainMask)
         guard let url = urls.last else { return }
         
-        if let p = url.path {
-            let path = NSURL.fileURLWithPath("\(p)/Logs/\(dateString).log")
-            fileURL = path
-            openFile()
-        }
+        let path = URL.init(fileURLWithPath: "\(url.path)/Logs/\(dateString).log")
+        fileURL = path
+        openFile()
     }
     
     deinit {
         closeFile()
     }
 
-    public func log(message: String) {
+    public func log(_ message: String) {
         if let handle = fileHandle {
             handle.seekToEndOfFile()
             let messageWithNewLine = "\(message)\n"
-            if let data = messageWithNewLine.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
+            if let data = messageWithNewLine.data(using: String.Encoding.utf8, allowLossyConversion: false) {
                 let exception = tryBlock {
-                    handle.writeData(data)
+                    handle.write(data)
                 }
                 if exception != nil {
                     print("Error writing to log file \(exception)")
@@ -67,17 +66,18 @@ public final class FileLogger: NSObject, LogInterface {
     }
     
     private func openFile() {
-        let fm = NSFileManager.defaultManager()
-        if let URL = fileURL, filePath = URL.path {
-            if fm.fileExistsAtPath(filePath) == false {
+        let fm = FileManager.default
+        if let URL = fileURL {
+            let filePath = URL.path
+            if fm.fileExists(atPath: filePath) == false {
                 do {
-                    try fm.createDirectoryAtURL(URL.URLByDeletingLastPathComponent!, withIntermediateDirectories: true, attributes: nil)
+                    try fm.createDirectory(at: URL.deletingLastPathComponent(), withIntermediateDirectories: true, attributes: nil)
                 } catch _ { }
-                fm.createFileAtPath(filePath, contents: nil, attributes: nil)
+                fm.createFile(atPath: filePath, contents: nil, attributes: nil)
             }
             
             do {
-                fileHandle = try NSFileHandle(forWritingToURL: URL)
+                fileHandle = try FileHandle(forWritingTo: URL)
             } catch {
                 print("Error opening log file \(error)")
                 fileHandle = nil
@@ -91,5 +91,4 @@ public final class FileLogger: NSObject, LogInterface {
         }
         fileHandle = nil
     }
-
 }
