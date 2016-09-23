@@ -54,14 +54,14 @@ public final class Logger {
 		return level.rawValue >= self.level.level.rawValue
 	}
 
-	func log(_ logLevel: DefaultLogLevel, message: @autoclosure () -> String) {
+	func log(level: DefaultLogLevel, message: @autoclosure () -> String) {
         // Don't bother trying to log something with no loggers registered.
 		guard activeLoggers.count > 0 else {
-			print("*** WARNING: log(\(logLevel.rawValue)) invoked with no loggers registered. If you're expecting file logging for forensic purposes, you're losing data. Message was '\(message())'")
+			print("*** WARNING: log(\(level.rawValue)) invoked with no loggers registered. If you're expecting file logging for forensic purposes, you're losing data. Message was '\(message())'")
             return
 		}
 
-		if self.willLog(level: logLevel) {
+		if self.willLog(level: level) {
 			let constMessage = message()
             
             activeLoggers.forEach { logger in
@@ -73,7 +73,7 @@ public final class Logger {
 	}
 
 	func logFormatted(level: DefaultLogLevel, message: @autoclosure () -> String) {
-		log(level, message: formatter.formatLog(level, message: message()))
+		log(level: level, message: formatter.formatLog(level, message: message()))
 	}
 }
 
