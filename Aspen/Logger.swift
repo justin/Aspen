@@ -23,10 +23,10 @@
 import Foundation
 
 public final class Logger {
-	public var level: LogLevel
-	public var formatter: LogFormatter
+	public private(set) var level: LogLevel
+	public let formatter: LogFormatter
 
-	internal var name: String
+	internal let name: String
 
 	internal var activeLoggers = Array<LogInterface>()
 
@@ -41,7 +41,7 @@ public final class Logger {
 		self.level = LogLevel.getLevel(level)
 		self.formatter = LogFormatter()
 	}
-
+    
 	public func registerLogger(_ logger: LogInterface) {
 		activeLoggers.append(logger)
 	}
@@ -50,8 +50,8 @@ public final class Logger {
 		self.level = LogLevel.getLevel(level)
 	}
 
-	func willLog(_ logLevel: DefaultLogLevel) -> Bool {
-		return logLevel.rawValue >= level.level.rawValue
+	func willLog(level: DefaultLogLevel) -> Bool {
+		return level.rawValue >= self.level.level.rawValue
 	}
 
 	func log(_ logLevel: DefaultLogLevel, message: @autoclosure () -> String) {
@@ -61,7 +61,7 @@ public final class Logger {
             return
 		}
 
-		if self.willLog(logLevel) {
+		if self.willLog(level: logLevel) {
 			let constMessage = message()
             
             activeLoggers.forEach { logger in

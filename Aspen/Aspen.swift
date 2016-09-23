@@ -41,7 +41,7 @@ public final class Aspen: NSObject {
 	}
 }
 
-public func aspenVerbose( _ message: @autoclosure () -> String) { Aspen.shared.verbose(message) }
-public func aspenInfo( _ message: @autoclosure () -> String) { Aspen.shared.info(message) }
-public func aspenWarn( _ message: @autoclosure () -> String) { Aspen.shared.warn(message) }
-public func aspenError( _ message: @autoclosure () -> String) { Aspen.shared.error(message) }
+public func aspenVerbose(_ message: @autoclosure () -> String) { Aspen.shared.verbose(message) }
+public func aspenInfo(_ message: @autoclosure () -> String) { Aspen.shared.info(message) }
+public func aspenWarn(_ message: @autoclosure () -> String) { Aspen.shared.warn(message) }
+public func aspenError(_ message: @autoclosure () -> String) { Aspen.shared.error(message) }
