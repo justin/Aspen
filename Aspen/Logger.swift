@@ -42,7 +42,7 @@ public final class Logger {
 		self.formatter = LogFormatter()
 	}
     
-	public func registerLogger(_ logger: LogInterface) {
+	public func register(logger: LogInterface) {
 		activeLoggers.append(logger)
 	}
 

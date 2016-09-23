@@ -27,7 +27,7 @@ public final class Aspen: NSObject {
 
     @objc(registerLogger:)
 	public class func register(logger: LogInterface) {
-		shared.registerLogger(logger)
+		shared.register(logger: logger)
 	}
 
 	public class func setLoggingLevel(_ level: DefaultLogLevel) {
