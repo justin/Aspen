@@ -33,12 +33,6 @@ public final class Aspen: NSObject {
 	public class func setLoggingLevel(_ level: DefaultLogLevel) {
 		shared.setLoggingLevel(level)
 	}
-
-	public class func getLogger(_ logName:String, level:DefaultLogLevel) -> Logger {
-		let logger = Logger(name: logName, level: level)
-		logger.activeLoggers += shared.activeLoggers
-		return logger
-	}
 }
 
 public func aspenVerbose(_ message: @autoclosure () -> String) { Aspen.shared.verbose(message) }

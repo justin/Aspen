@@ -28,7 +28,7 @@ public final class Logger {
 
 	internal let name: String
 
-	internal var activeLoggers = Array<LogInterface>()
+    private var activeLoggers = Array<LogInterface>()
 
 	private let queue = DispatchQueue(label: "com.secondgear.AspenQueue", attributes: [])
 
