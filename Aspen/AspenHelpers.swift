@@ -28,8 +28,8 @@ import Foundation
 */
 extension Aspen {
 	@objc(willLog:)
-	public class func willLog(_ level: DefaultLogLevel) -> Bool { return self.globalLogger.willLog(level) }
+	public class func willLog(_ level: DefaultLogLevel) -> Bool { return self.shared.willLog(level) }
 
 	@objc(logWithLevel:message:)
-	public class func log(_ level: DefaultLogLevel, message: String!) { self.globalLogger.logFormatted(level, message: message) }
+	public class func log(_ level: DefaultLogLevel, message: String!) { self.shared.logFormatted(level, message: message) }
 }

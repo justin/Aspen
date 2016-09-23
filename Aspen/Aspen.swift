@@ -22,26 +22,25 @@
 
 import Foundation
 
-public final class Aspen: NSObject
-{
-	static var globalLogger = Logger(name: "Shared", level: .info)
+public final class Aspen: NSObject {
+	static var shared = Logger(name: "Shared", level: .info)
 
 	public class func registerLogger(_ logger: LogInterface) {
-		globalLogger.registerLogger(logger)
+		shared.registerLogger(logger)
 	}
 
 	public class func setLoggingLevel(_ level: DefaultLogLevel) {
-		globalLogger.setLoggingLevel(level)
+		shared.setLoggingLevel(level)
 	}
 
 	public class func getLogger(_ logName:String, level:DefaultLogLevel) -> Logger {
 		let logger = Logger(name: logName, level: level)
-		logger.activeLoggers += globalLogger.activeLoggers
+		logger.activeLoggers += shared.activeLoggers
 		return logger
 	}
 }
 
-public func aspenVerbose( _ message: @autoclosure () -> String) { Aspen.globalLogger.verbose(message) }
-public func aspenInfo( _ message: @autoclosure () -> String) { Aspen.globalLogger.info(message) }
-public func aspenWarn( _ message: @autoclosure () -> String) { Aspen.globalLogger.warn(message) }
-public func aspenError( _ message: @autoclosure () -> String) { Aspen.globalLogger.error(message) }
+public func aspenVerbose( _ message: @autoclosure () -> String) { Aspen.shared.verbose(message) }
+public func aspenInfo( _ message: @autoclosure () -> String) { Aspen.shared.info(message) }
+public func aspenWarn( _ message: @autoclosure () -> String) { Aspen.shared.warn(message) }
+public func aspenError( _ message: @autoclosure () -> String) { Aspen.shared.error(message) }
