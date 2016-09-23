@@ -22,7 +22,7 @@
 
 import Foundation
 
-public final class Logger: NSObject {
+public final class Logger {
 	public var level: LogLevel
 	public var formatter: LogFormatter
 
@@ -32,16 +32,14 @@ public final class Logger: NSObject {
 
 	private let queue = DispatchQueue(label: "com.secondgear.AspenQueue", attributes: [])
 
-	override init() {
-		fatalError("Please use init(name:, level:) to initialize a new Logger instance")
-	}
-
+    // MARK: Initialization
+    // ====================================
+    // Initialization
+    // ====================================
 	public init(name: String, level: DefaultLogLevel = .info) {
 		self.name = name
 		self.level = LogLevel.getLevel(level)
 		self.formatter = LogFormatter()
-
-		super.init()
 	}
 
 	public func registerLogger(_ logger: LogInterface) {

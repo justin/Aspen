@@ -30,7 +30,7 @@ public enum DefaultLogLevel: Int {
     case error = 500
 }
 
-public final class LogLevel: NSObject {
+public final class LogLevel {
     public var level: DefaultLogLevel
     public var name: String
     public var label: String
@@ -40,12 +40,14 @@ public final class LogLevel: NSObject {
     internal static let WARNING_LEVEL = LogLevel.makeLevel(level: .warning, name: "Warning Level", label: "WARN")
     internal static let ERROR_LEVEL = LogLevel.makeLevel(level: .error,  name: "Error Level", label: "ERROR")
     
+    // MARK: Initialization
+    // ====================================
+    // Initialization
+    // ====================================
     public init(level: DefaultLogLevel, name: String, label: String) {
         self.level = level
         self.name = name
         self.label = label
-        
-        super.init()
     }
     
     public static func getLevel(_ level:DefaultLogLevel) -> LogLevel {
@@ -73,9 +75,13 @@ public final class LogLevel: NSObject {
             return "🚨"
         }
     }
-    
-   
 }
+
+extension LogLevel: Equatable { }
+public func ==(lhs: LogLevel, rhs: LogLevel) -> Bool {
+    return (lhs.level.rawValue == rhs.level.rawValue)
+}
+
 
 // MARK: Private / Convenience
 // ====================================
