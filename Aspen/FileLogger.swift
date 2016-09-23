@@ -23,9 +23,9 @@
 import Foundation
 
 public final class FileLogger: NSObject, LogInterface {
-    public var fileURL:URL?
+    public var fileURL: URL?
     
-    private var fileHandle:FileHandle?
+    private var fileHandle: FileHandle?
     
     public override init() {
         super.init()

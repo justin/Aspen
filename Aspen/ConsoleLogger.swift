@@ -23,11 +23,6 @@
 import Foundation
 
 public final class ConsoleLogger: NSObject, LogInterface {
-    public override init()
-    {
-        super.init()
-    }
-    
     public func log(message: String) {
         print(message)
     }
