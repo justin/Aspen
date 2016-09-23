@@ -61,15 +61,15 @@ public final class Logger {
             return
 		}
 
-		if self.willLog(level: level) {
-			let constMessage = message()
-            
-            activeLoggers.forEach { logger in
-                queue.async {
-                    logger.log(message: constMessage)
-                }
+        guard self.willLog(level: level) else { return }
+        
+        let constMessage = message()
+        
+        activeLoggers.forEach { logger in
+            queue.async {
+                logger.log(message: constMessage)
             }
-		}
+        }
 	}
 
 	func logFormatted(level: DefaultLogLevel, message: @autoclosure () -> String) {
