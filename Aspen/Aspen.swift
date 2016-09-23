@@ -25,7 +25,8 @@ import Foundation
 public final class Aspen: NSObject {
 	static var shared = Logger(name: "Shared", level: .info)
 
-	public class func registerLogger(_ logger: LogInterface) {
+    @objc(registerLogger:)
+	public class func register(logger: LogInterface) {
 		shared.registerLogger(logger)
 	}
 

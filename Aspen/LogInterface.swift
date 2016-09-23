@@ -22,6 +22,7 @@
 
 import Foundation
 
+@objc
 public protocol LogInterface {
     func log(message: String)
 }
