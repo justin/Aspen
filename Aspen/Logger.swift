@@ -72,26 +72,26 @@ public final class Logger {
 		}
 	}
 
-	func logFormatted(_ logLevel: DefaultLogLevel, message: @autoclosure () -> String) {
-		log(logLevel, message: formatter.formatLog(logLevel, message: message()))
+	func logFormatted(level: DefaultLogLevel, message: @autoclosure () -> String) {
+		log(level, message: formatter.formatLog(level, message: message()))
 	}
 }
 
 /** Convenience / shorthand logging functions for predefined log levels. */
 extension Logger {
 	public func verbose( _ message: @autoclosure () -> String) {
-		logFormatted(.verbose, message: message)
+        logFormatted(level: .verbose, message: message)
 	}
 
 	public func info( _ message: @autoclosure () -> String) {
-		logFormatted(.info, message: message)
+		logFormatted(level: .info, message: message)
 	}
 
 	public func warn( _ message: @autoclosure () -> String) {
-		logFormatted(.warning, message: message)
+		logFormatted(level: .warning, message: message)
 	}
 
 	public func error( _ message: @autoclosure () -> String) {
-		logFormatted(.error, message: message)
+		logFormatted(level: .error, message: message)
 	}
 }

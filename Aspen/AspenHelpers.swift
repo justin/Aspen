@@ -31,5 +31,5 @@ extension Aspen {
 	public class func willLog(level: DefaultLogLevel) -> Bool { return self.shared.willLog(level: level) }
 
 	@objc(logWithLevel:message:)
-	public class func log(level: DefaultLogLevel, message: String!) { self.shared.logFormatted(level, message: message) }
+	public class func log(level: DefaultLogLevel, message: String!) { self.shared.logFormatted(level: level, message: message) }
 }
