@@ -20,12 +20,7 @@
 //    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //    THE SOFTWARE.
 
-#import <TargetConditionals.h>
-
 @import Foundation;
-#if TARGET_IPHONE_OS || TARGET_TV_OS || TARGET_WATCH_OS
-@import UIKit;
-#endif
 
 //! Project version number for Aspen.
 FOUNDATION_EXPORT double AspenVersionNumber;
