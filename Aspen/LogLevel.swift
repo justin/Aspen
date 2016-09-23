@@ -35,10 +35,10 @@ public final class LogLevel: NSObject {
     public var name: String
     public var label: String
     
-    internal static let VERBOSE_LEVEL = LogLevel.create(.verbose, name: "Verbose Level", label: "VERBOSE")
-    internal static let INFO_LEVEL = LogLevel.create(.info, name: "Info Level", label: "INFO")
-    internal static let WARNING_LEVEL = LogLevel.create(.warning, name: "Warning Level", label: "WARN")
-    internal static let ERROR_LEVEL = LogLevel.create(.error,  name: "Error Level", label: "ERROR")
+    internal static let VERBOSE_LEVEL = LogLevel.makeLevel(level: .verbose, name: "Verbose Level", label: "VERBOSE")
+    internal static let INFO_LEVEL = LogLevel.makeLevel(level: .info, name: "Info Level", label: "INFO")
+    internal static let WARNING_LEVEL = LogLevel.makeLevel(level: .warning, name: "Warning Level", label: "WARN")
+    internal static let ERROR_LEVEL = LogLevel.makeLevel(level: .error,  name: "Error Level", label: "ERROR")
     
     public init(level: DefaultLogLevel, name: String, label: String) {
         self.level = level
@@ -74,7 +74,15 @@ public final class LogLevel: NSObject {
         }
     }
     
-   private static func create(_ level: DefaultLogLevel, name: String, label: String) -> LogLevel {
+   
+}
+
+// MARK: Private / Convenience
+// ====================================
+// Private / Convenience
+// ====================================
+private extension LogLevel {
+    static func makeLevel(level: DefaultLogLevel, name: String, label: String) -> LogLevel {
         return LogLevel(level:level, name: name, label: label)
     }
 }
