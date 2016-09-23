@@ -50,7 +50,7 @@ public final class FileLogger: NSObject, LogInterface {
         closeFile()
     }
 
-    public func log(_ message: String) {
+    public func log(message: String) {
         if let handle = fileHandle {
             handle.seekToEndOfFile()
             let messageWithNewLine = "\(message)\n"

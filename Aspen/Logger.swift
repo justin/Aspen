@@ -68,7 +68,7 @@ public final class Logger: NSObject {
             
             activeLoggers.forEach { logger in
                 queue.async {
-                    logger.log(constMessage)
+                    logger.log(message: constMessage)
                 }
             }
 		}
