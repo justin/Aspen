@@ -59,7 +59,7 @@ public final class FileLogger: NSObject, LogInterface {
                     handle.write(data)
                 }
                 if exception != nil {
-                    print("Error writing to log file \(exception)")
+                    print("Error writing to log file \(String(describing: exception))")
                 }
             }
         }
